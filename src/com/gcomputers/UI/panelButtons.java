@@ -30,9 +30,6 @@ public class panelButtons extends panelTemplate {
         JButton b1 = new JButton();
         JButton b2 = new JButton();
         JButton b3 = new JButton();
-        b1.setFocusPainted(false);
-        b2.setFocusPainted(false);
-        b3.setFocusPainted(false);
         
         this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50, 435, 0);
         this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50, 485, 0);

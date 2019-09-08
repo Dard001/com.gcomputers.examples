@@ -38,6 +38,7 @@ public class panelTemplate extends JPanel {
         b.setBorder(null);
         b.setContentAreaFilled(false);
         b.setSize(w, h);
+        b.setFocusPainted(false);
         b.setHorizontalTextPosition(JButton.RIGHT);
         
         return b;
