@@ -9,12 +9,11 @@ package com.gcomputers.UI;
  *
  * @author Dard
  */
-public class main {
-    private static final int WIDTH = 600;
-    private static final int HEIGHT = 600;
+public class storageText {
+
+    public static final String DESCRIPTION = "This is an example of a user interface.";
     
-    public static void main(String[] args){
-        System.out.println("Running UI");
-        windowSetup runningWindow = new windowSetup(WIDTH, HEIGHT);
+    private storageText(){
+        System.exit(1);
     }
 }

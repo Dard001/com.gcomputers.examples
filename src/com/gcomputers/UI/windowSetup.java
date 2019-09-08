@@ -5,12 +5,9 @@
  */
 package com.gcomputers.UI;
 
-import java.awt.Graphics2D;
-import java.awt.Insets;
-import java.awt.RenderingHints;
-import java.awt.image.BufferedImage;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -19,63 +16,42 @@ import javax.swing.JPanel;
  * @author Dard
  */
 public class windowSetup {
-    private final ImageIcon windowIcon = new ImageIcon(getClass().getResource("src/ecoIcon.png"));
-    private final ImageIcon homeButton = new ImageIcon(getClass().getResource("src/homeIcon.png"));
-    private final ImageIcon homeButtonPressed = new ImageIcon(getClass().getResource("src/homeIconPressed.png"));
-    private final ImageIcon settingsButton = new ImageIcon(getClass().getResource("src/settingsIcon.png"));
-    private final ImageIcon settingsButtonPressed = new ImageIcon(getClass().getResource("src/settingsIconPressed.png"));
-    private final ImageIcon exitButton = new ImageIcon(getClass().getResource("src/powerIcon.png"));
-    private final ImageIcon exitButtonPressed = new ImageIcon(getClass().getResource("src/powerIconPressed.png"));
+    private final ActionListener evt1 = (ActionEvent evt) -> { jButtonActionPerformed(evt, 1);};
+    private final ActionListener evt2 = (ActionEvent evt) -> { jButtonActionPerformed(evt, 2);};
+    private final ActionListener evt3 = (ActionEvent evt) -> { jButtonActionPerformed(evt, 3);};
+    private mainFrame f;
+    private panelHome home;
+    private panelSettings settings;
+    private JPanel currentPanel;
+    private panelButtons buttons;
     
-    private ImageIcon getScaledImage(ImageIcon icon, int w, int h){
-        BufferedImage resizedImg = new BufferedImage(w,h,BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = resizedImg.createGraphics();
-        
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-        g2.drawImage(icon.getImage(), 0,0,w,h,null);
-        g2.dispose();
-        
-        ImageIcon newIcon = new ImageIcon(resizedImg);
-        
-        return newIcon;
+    private void jButtonActionPerformed(ActionEvent evt, int action){
+        switch(action){
+            case 1: System.out.println("Home Button Pressed"); setActivePanel(f, home); break;
+            case 2: System.out.println("Settings Button Pressed"); setActivePanel(f, settings); break;
+            case 3: System.exit(0); break;
+            default: System.exit(1);
+        }
     }
     
-    private JButton applyButtonSettings(JButton b, ImageIcon icon, ImageIcon pressedIcon, int w, int h, int x, int y){
-        b.setIcon(getScaledImage(icon, w, h));
-        b.setPressedIcon(getScaledImage(pressedIcon, w, h));
-        b.setBorderPainted(false);
-        b.setMargin(new Insets(0,0,0,0));
-        b.setBorder(null);
-        b.setContentAreaFilled(false);
-        b.setSize(w, h);
-        b.setLocation(x,y);
-        
-        return b;
+    private void setActivePanel(JFrame f, JPanel p){
+        f.remove(currentPanel);
+        currentPanel.setVisible(false);
+        f.add(p).setVisible(true);
+        f.revalidate();
+        currentPanel = p;
     }
     
     public windowSetup(int w, int h){
-        JFrame f = new JFrame();
-        f.setSize(w, h);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.setTitle("Test Window");
-        f.setLocationRelativeTo(null);
-        f.setIconImage(windowIcon.getImage()); //materials.io
-
-        JPanel p = new JPanel();
-        p.setLayout(null);
-        
-        JButton b1 = new JButton();
-        JButton b2 = new JButton();
-        JButton b3 = new JButton();
-        this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50, 0, 0);
-        this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50, 50, 0);
-        this.applyButtonSettings(b3, exitButton, exitButtonPressed, 50, 50, 100, 0);
-
-        p.add(b1);
-        p.add(b2);
-        p.add(b3);
-        
-        f.getContentPane().add(p);
+        f = new mainFrame(w, h);
+        f.setLayout(new GridLayout (2,1));
+        buttons = new panelButtons(evt1, evt2, evt3);
+        home = new panelHome();
+        settings = new panelSettings();
+        f.add(buttons);
+        f.add(home);
+        currentPanel = home;
+        f.pack();
         f.setVisible(true);
     }
 }
