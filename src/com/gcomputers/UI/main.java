@@ -5,12 +5,11 @@
  */
 package com.gcomputers.UI;
 
-import java.awt.Dimension;
 import java.awt.Toolkit;
 
 /**
  *
- * @author Dard
+ * @author NG @ G-Computers
  */
 public class main {
     private static final int WIDTH = 600;
@@ -18,7 +17,7 @@ public class main {
     private static final int SCREEN_WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private static final int SCREEN_HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     
-    public static void main(String[] args){
+    public static void main(String[] args){     
         System.out.println("Screen dimensions are: " + SCREEN_WIDTH + "x" + SCREEN_HEIGHT);
         windowSetup runningWindow = new windowSetup(WIDTH, HEIGHT);
     }
