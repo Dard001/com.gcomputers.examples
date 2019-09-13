@@ -17,9 +17,7 @@
 package com.gcomputers.UI;
 
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
@@ -27,37 +25,15 @@ import javax.swing.Timer;
  *
  * @author NG @ G-Computers
  */
-public class windowSetup {
-    private final ActionListener evt1 = (ActionEvent) -> { jButtonActionPerformed(1);};
-    private final ActionListener evt2 = (ActionEvent) -> { jButtonActionPerformed(2);};
-    private final ActionListener evt3 = (ActionEvent) -> { jButtonActionPerformed(3);};
+public class windowHandler {
     private final Timer timer = new Timer(1000, (ActionEvent) -> { updateProgram();});
     private final mainFrame f;
     private final panelHome home;
     private final panelSettings settings;
     private final panelButtons buttons;
     private JPanel currentPanel;
-    
-    private void exitProgram(int code){
-        timer.stop();
-        f.dispose();
-        System.exit(code);
-    }
-    
-    private void updateProgram(){
-        System.out.println("Program Updated");
-    }
-    
-    private void jButtonActionPerformed(int action){
-        switch(action){
-            case 1: System.out.println("Home Button Pressed"); setActivePanel(f, home); break;
-            case 2: System.out.println("Settings Button Pressed"); setActivePanel(f, settings); break;
-            case 3: exitProgram(0); break;
-            default: exitProgram(1);
-        }
-    }
-    
-    private void setActivePanel(JFrame f, JPanel p){
+        
+    private void setActivePanel(JPanel p){
         f.remove(currentPanel);
         currentPanel.setVisible(false);
         f.add(p).setVisible(true);
@@ -65,10 +41,31 @@ public class windowSetup {
         currentPanel = p;
     }
     
-    public windowSetup(int w, int h){
+    public void exitProgram(int code){
+        timer.stop();
+        f.dispose();
+        if (code != 0){JOptionPane.showMessageDialog(null, "Program Error " + code + ": Closing Program.");}
+        System.exit(code);
+    }
+    
+    public void updateProgram(){
+        f.repaint();
+        System.out.println("Program Updated");
+    }
+    
+    public void windowActionPerformed(int action){
+        switch(action){
+            case 1: System.out.println("Home Button Pressed"); setActivePanel(home); break;
+            case 2: System.out.println("Settings Button Pressed"); setActivePanel(settings); break;
+            case 3: exitProgram(0); break;
+            default: exitProgram(1);
+        }
+    }
+    
+    public windowHandler(int w, int h){
         f = new mainFrame(w, h);
         f.setLayout(new GridLayout (2,1));
-        buttons = new panelButtons(evt1, evt2, evt3);
+        buttons = new panelButtons(this);
         home = new panelHome();
         settings = new panelSettings();
         f.add(buttons);

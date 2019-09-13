@@ -18,6 +18,7 @@ package com.gcomputers.UI;
 
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,32 +27,45 @@ import javax.swing.JButton;
  *
  * @author NG @ G-Computers
  */
-public class panelButtons extends panelTemplate {
+public class panelButtons extends panelTemplate implements ActionListener {
     private final ImageIcon homeButton = new ImageIcon(getClass().getResource("src/homeIcon.png"));
     private final ImageIcon homeButtonPressed = new ImageIcon(getClass().getResource("src/homeIconPressed.png"));
     private final ImageIcon settingsButton = new ImageIcon(getClass().getResource("src/settingsIcon.png"));
     private final ImageIcon settingsButtonPressed = new ImageIcon(getClass().getResource("src/settingsIconPressed.png"));
     private final ImageIcon exitButton = new ImageIcon(getClass().getResource("src/powerIcon.png"));
     private final ImageIcon exitButtonPressed = new ImageIcon(getClass().getResource("src/powerIconPressed.png"));
+    private final JButton b1 = new JButton();
+    private final JButton b2 = new JButton();
+    private final JButton b3 = new JButton();
+    private final windowHandler wh;
 
-    public panelButtons(ActionListener evt1, ActionListener evt2, ActionListener evt3){
-        this.setLayout(new GridLayout(1,3));
-        this.setBackground(Color.BLACK);
-        
-        JButton b1 = new JButton();
-        JButton b2 = new JButton();
-        JButton b3 = new JButton();
-        
+    private void setupButtons(){
         this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50, 435, 0);
         this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50, 485, 0);
         this.applyButtonSettings(b3, exitButton, exitButtonPressed, 50, 50, 535, 0);
 
-        b1.addActionListener(evt1);
-        b2.addActionListener(evt2);
-        b3.addActionListener(evt3);
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
         
         this.add(b1);
         this.add(b2);
         this.add(b3);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (b1.isFocusOwner()){wh.windowActionPerformed(1);}
+        else if (b2.isFocusOwner()){wh.windowActionPerformed(2);}
+        else if (b3.isFocusOwner()){wh.windowActionPerformed(3);}
+        else {wh.exitProgram(1);}
+    }
+
+    public panelButtons(windowHandler wh){
+        this.setLayout(new GridLayout(1,3));
+        this.setBackground(Color.BLACK);
+        this.wh = wh;
+        
+        this.setupButtons();
     }
 }
