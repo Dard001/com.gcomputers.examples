@@ -34,23 +34,30 @@ public class panelButtons extends panelTemplate implements ActionListener {
     private final ImageIcon settingsButtonPressed = new ImageIcon(getClass().getResource("src/settingsIconPressed.png"));
     private final ImageIcon exitButton = new ImageIcon(getClass().getResource("src/powerIcon.png"));
     private final ImageIcon exitButtonPressed = new ImageIcon(getClass().getResource("src/powerIconPressed.png"));
+    private final ImageIcon searchButton = new ImageIcon(getClass().getResource("src/searchIcon.png"));
+    private final ImageIcon searchButtonPressed = new ImageIcon(getClass().getResource("src/searchIconPressed.png"));
     private final JButton b1 = new JButton();
     private final JButton b2 = new JButton();
     private final JButton b3 = new JButton();
+    private final JButton b4 = new JButton();
     private final windowHandler wh;
 
     private void setupButtons(){
-        this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50, 435, 0);
-        this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50, 485, 0);
-        this.applyButtonSettings(b3, exitButton, exitButtonPressed, 50, 50, 535, 0);
+        this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50);
+        this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50);
+        this.applyButtonSettings(b3, searchButton, searchButtonPressed, 50, 50);
+        this.applyButtonSettings(b4, exitButton, exitButtonPressed, 50, 50);
+
 
         b1.addActionListener(this);
         b2.addActionListener(this);
         b3.addActionListener(this);
+        b4.addActionListener(this);
         
         this.add(b1);
         this.add(b2);
         this.add(b3);
+        this.add(b4);
     }
 
     @Override
@@ -58,11 +65,12 @@ public class panelButtons extends panelTemplate implements ActionListener {
         if (b1.isFocusOwner()){wh.windowActionPerformed(1);}
         else if (b2.isFocusOwner()){wh.windowActionPerformed(2);}
         else if (b3.isFocusOwner()){wh.windowActionPerformed(3);}
+        else if (b4.isFocusOwner()){wh.windowActionPerformed(4);}
         else {wh.exitProgram(1);}
     }
 
     public panelButtons(windowHandler wh){
-        this.setLayout(new GridLayout(1,3));
+        this.setLayout(new GridLayout(1,4));
         this.setBackground(Color.BLACK);
         this.wh = wh;
         

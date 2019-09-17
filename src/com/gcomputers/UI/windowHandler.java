@@ -16,7 +16,7 @@
  */
 package com.gcomputers.UI;
 
-import java.awt.GridLayout;
+import java.awt.BorderLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -26,17 +26,19 @@ import javax.swing.Timer;
  * @author NG @ G-Computers
  */
 public class windowHandler {
-    private final Timer timer = new Timer(1000, (ActionEvent) -> { updateProgram();});
+    private final Timer timer = new Timer(10000, (ActionEvent) -> { updateProgram();});
     private final mainFrame f;
     private final panelHome home;
     private final panelSettings settings;
+    private final panelSearch search;
     private final panelButtons buttons;
     private JPanel currentPanel;
         
     private void setActivePanel(JPanel p){
         f.remove(currentPanel);
         currentPanel.setVisible(false);
-        f.add(p).setVisible(true);
+        f.add(p, BorderLayout.CENTER);
+        p.setVisible(true);
         f.revalidate();
         currentPanel = p;
     }
@@ -49,7 +51,7 @@ public class windowHandler {
     }
     
     public void updateProgram(){
-        f.repaint();
+        f.revalidate();
         System.out.println("Program Updated");
     }
     
@@ -57,21 +59,23 @@ public class windowHandler {
         switch(action){
             case 1: System.out.println("Home Button Pressed"); setActivePanel(home); break;
             case 2: System.out.println("Settings Button Pressed"); setActivePanel(settings); break;
-            case 3: exitProgram(0); break;
+            case 3: System.out.println("Search Button Pressed"); setActivePanel(search); break;
+            case 4: exitProgram(0); break;
             default: exitProgram(1);
         }
     }
     
     public windowHandler(int w, int h){
         f = new mainFrame(w, h);
-        f.setLayout(new GridLayout (2,1));
+        f.setLayout(new BorderLayout(0,0));
         buttons = new panelButtons(this);
         home = new panelHome();
         settings = new panelSettings();
-        f.add(buttons);
-        f.add(home);
+        search = new panelSearch(this);
+        f.add(buttons, BorderLayout.PAGE_START);
+        f.add(home, BorderLayout.CENTER);
         currentPanel = home;
-        f.pack();
+    //    f.pack();
         f.setVisible(true);
         
         timer.start(); 

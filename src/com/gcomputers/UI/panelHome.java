@@ -16,8 +16,8 @@
  */
 package com.gcomputers.UI;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.GridLayout;
 import javax.swing.JLabel;
 
 /**
@@ -27,21 +27,21 @@ import javax.swing.JLabel;
 public class panelHome extends panelTemplate {
           
     public panelHome (){
-        this.setLayout(new GridLayout(2,1));
+        this.setLayout(new BorderLayout(0,0));
         
         JLabel label = new JLabel("Home");
         label.setForeground(Color.WHITE);
         label.setHorizontalAlignment(JLabel.CENTER);
-        label.setVerticalAlignment(JLabel.CENTER);
+        label.setVerticalAlignment(JLabel.TOP);
         
         JLabel text = new JLabel(storageText.DESCRIPTION);
         text.setForeground(Color.WHITE);
-        text.setHorizontalAlignment(JLabel.LEFT);
-        text.setVerticalAlignment(JLabel.CENTER);
+        text.setHorizontalAlignment(JLabel.CENTER);
+        text.setVerticalAlignment(JLabel.TOP);
         
         this.setBackground(Color.BLACK);
-        this.add(label);
-        this.add(text);
+        this.add(label, BorderLayout.PAGE_START);
+        this.add(text, BorderLayout.CENTER);
         this.validate();
     }
 }

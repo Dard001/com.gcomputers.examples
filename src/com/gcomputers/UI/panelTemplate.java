@@ -51,6 +51,7 @@ public class panelTemplate extends JPanel {
         b.setSize(w, h);
         b.setFocusPainted(false);
         b.setHorizontalTextPosition(JButton.RIGHT);
+        b.setVerticalAlignment(JButton.TOP);
         
         return b;
     }

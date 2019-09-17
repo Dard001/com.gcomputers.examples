@@ -28,7 +28,7 @@ public class mainFrame extends JFrame{
     public mainFrame(int w, int h){
         this.setSize(w, h);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Test Window");
+        this.setTitle("Playground Program");
         this.setLocationRelativeTo(null);
         this.setIconImage(windowIcon.getImage()); //materials.io
         this.setResizable(false);

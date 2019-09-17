@@ -16,6 +16,7 @@
  */
 package com.gcomputers.UI;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.JLabel;
@@ -26,16 +27,16 @@ import javax.swing.JLabel;
  */
 public class panelSettings extends panelTemplate {
     
-    public panelSettings(){
-        this.setLayout(new GridLayout(2,1));
-        
+    public panelSettings(){ 
+        this.setLayout(new BorderLayout(0,0));
+                
         JLabel label = new JLabel("Settings");
         label.setForeground(Color.WHITE);
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
         
         this.setBackground(Color.BLACK);  
-        this.add(label);
+        this.add(label, BorderLayout.PAGE_START);
 
         this.validate();
     }
