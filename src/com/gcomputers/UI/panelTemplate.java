@@ -16,12 +16,14 @@
  */
 package com.gcomputers.UI;
 
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Insets;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 /**
  *
@@ -54,6 +56,16 @@ public class panelTemplate extends JPanel {
         b.setVerticalAlignment(JButton.TOP);
         
         return b;
+    }
+    
+    public final void applyTemplateSettings(JPanel panel){
+        panel.setForeground(Color.WHITE);
+        panel.setBackground(Color.BLACK);
+    }
+    
+    public final void applyTemplateSettings(JLabel label){
+        label.setForeground(Color.WHITE);
+        label.setBackground(Color.BLACK);
     }
     
     public final JButton applyButtonSettings(JButton b, ImageIcon icon, ImageIcon pressedIcon, int w, int h, int x, int y){

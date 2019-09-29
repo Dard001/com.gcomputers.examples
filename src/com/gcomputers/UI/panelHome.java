@@ -30,16 +30,16 @@ public class panelHome extends panelTemplate {
         this.setLayout(new BorderLayout(0,0));
         
         JLabel label = new JLabel("Home");
-        label.setForeground(Color.WHITE);
+        this.applyTemplateSettings(label);
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.TOP);
         
         JLabel text = new JLabel(storageText.DESCRIPTION);
-        text.setForeground(Color.WHITE);
+        this.applyTemplateSettings(text);
         text.setHorizontalAlignment(JLabel.CENTER);
         text.setVerticalAlignment(JLabel.TOP);
         
-        this.setBackground(Color.BLACK);
+        this.applyTemplateSettings(this);
         this.add(label, BorderLayout.PAGE_START);
         this.add(text, BorderLayout.CENTER);
         this.validate();

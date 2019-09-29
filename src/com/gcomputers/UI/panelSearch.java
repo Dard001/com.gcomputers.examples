@@ -32,7 +32,7 @@ import javax.swing.JTextArea;
  */
 public class panelSearch extends panelTemplate implements ActionListener{
     private final JTextArea windowContent;
-    private windowHandler wh;
+    private final windowHandler wh;
     private final JComboBox dropDown;
     private JLabel currentResultLinear, currentResultBinary;
     private final String[] nameSelection = {"Adrian", "Benjamin", "Donald", "George"};
@@ -42,18 +42,21 @@ public class panelSearch extends panelTemplate implements ActionListener{
     
    @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Search Performed");
-        int foundAtLinear = -1;
-        long timeStartedLinear = System.nanoTime();
-        foundAtLinear = storageStringSearch.linearSearch(sortedArray, dropDown.getSelectedItem().toString());
-        long timeEndedLinear = System.nanoTime();
-        long timeTakenLinear = timeEndedLinear - timeStartedLinear;
+        long timeStarted;
+        long timeEnded;
         
-        int foundAtBinary = -1;
-        long timeStartedBinary = System.nanoTime();
+        System.out.println("Search Performed");
+        int foundAtLinear;
+        timeStarted = System.nanoTime();
+        foundAtLinear = storageStringSearch.linearSearch(sortedArray, dropDown.getSelectedItem().toString());
+        timeEnded = System.nanoTime();
+        long timeTakenLinear = timeEnded- timeStarted;
+        
+        int foundAtBinary;
+        timeStarted = System.nanoTime();
         foundAtBinary = storageStringSearch.binarySearch(sortedArray, dropDown.getSelectedItem().toString());
-        long timeEndedBinary = System.nanoTime();
-        long timeTakenBinary = timeEndedBinary - timeStartedBinary;
+        timeEnded = System.nanoTime();
+        long timeTakenBinary = timeEnded - timeStarted;
         
         this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary);
     }
@@ -75,10 +78,8 @@ public class panelSearch extends panelTemplate implements ActionListener{
         currentResultLinear.setAlignmentX(JLabel.CENTER);
         currentResultBinary.setAlignmentX(JLabel.CENTER);
         
-        searchResultLinear.setForeground(Color.WHITE);
-        searchResultLinear.setBackground(Color.BLACK);
-        searchResultBinary.setForeground(Color.WHITE);
-        searchResultBinary.setBackground(Color.BLACK);
+        this.applyTemplateSettings(searchResultLinear);
+        this.applyTemplateSettings(searchResultBinary);
         
         borderEnd.add(searchResultLinear);
         borderEnd.add(searchResultBinary);
@@ -96,15 +97,13 @@ public class panelSearch extends panelTemplate implements ActionListener{
         borderStart = new JPanel();
         borderStart.setLayout(new GridLayout(2,1));
         borderCenter = new JPanel();
+        borderCenter.setLayout(new GridLayout(1,1));
         borderEnd = new JPanel();
         borderEnd.setLayout(new GridLayout(10,1));
         
-        borderStart.setForeground(Color.WHITE);
-        borderStart.setBackground(Color.BLACK);        
-        borderCenter.setForeground(Color.WHITE);
-        borderCenter.setBackground(Color.BLACK);        
-        borderEnd.setForeground(Color.WHITE);
-        borderEnd.setBackground(Color.BLACK);
+        this.applyTemplateSettings(borderStart);
+        this.applyTemplateSettings(borderCenter);
+        this.applyTemplateSettings(borderEnd);
         
         currentResultLinear = new JLabel("No Search Performed");
         currentResultBinary = new JLabel("No Search Performed");
@@ -113,7 +112,7 @@ public class panelSearch extends panelTemplate implements ActionListener{
         borderEnd.add(currentResultBinary);
         
         JLabel label = new JLabel("Search");
-        label.setForeground(Color.WHITE);
+        this.applyTemplateSettings(label);
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
         
@@ -130,13 +129,12 @@ public class panelSearch extends panelTemplate implements ActionListener{
         windowContent.setBackground(Color.BLACK);
         borderCenter.add(windowContent);
         
-        this.setBackground(Color.BLACK);  
+        this.applyTemplateSettings(this);
 
         this.add(borderStart, BorderLayout.PAGE_START);
         this.add(borderCenter, BorderLayout.CENTER);
         this.add(borderEnd, BorderLayout.PAGE_END);   
         this.validate();
-    
     }
 
 

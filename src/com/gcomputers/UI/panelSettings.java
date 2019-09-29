@@ -31,11 +31,11 @@ public class panelSettings extends panelTemplate {
         this.setLayout(new BorderLayout(0,0));
                 
         JLabel label = new JLabel("Settings");
-        label.setForeground(Color.WHITE);
+        this.applyTemplateSettings(label);
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
         
-        this.setBackground(Color.BLACK);  
+        this.applyTemplateSettings(this);
         this.add(label, BorderLayout.PAGE_START);
 
         this.validate();
