@@ -31,7 +31,7 @@ public class windowHandler {
     private final panelHome home;
     private final panelSettings settings;
     private final panelSearch search;
-    private final panelSearch searchNumbers;
+    private final panelSearchNumbers searchNumbers;
     private final panelButtons buttons;
     private JPanel currentPanel;
         
@@ -74,7 +74,7 @@ public class windowHandler {
         home = new panelHome();
         settings = new panelSettings();
         search = new panelSearch(this);
-        searchNumbers = new panelSearch(this);
+        searchNumbers = new panelSearchNumbers(this);
         f.add(buttons, BorderLayout.PAGE_START);
         f.add(home, BorderLayout.CENTER);
         currentPanel = home;

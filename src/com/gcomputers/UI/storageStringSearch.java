@@ -68,11 +68,11 @@ public class storageStringSearch {
         return -1;
     }
     
-    public static final int simpleBoyerMooreSearch(String[] arr, String ets){
+    public static final int simpleBoyerMooreSearch(String[] arr, String elementToSearch){
         return -1;
     }
     
-    public static final int boyerMooreHorspoolSearch(String[] arr, String ets){
+    public static final int boyerMooreHorspoolSearch(String[] arr, String elementToSearch){
         return -1;
     }
         
