@@ -14,22 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.UI;
+package com.gcomputers.SwingUI;
 
 import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
 
 /**
  *
  * @author NG @ G-Computers
  */
 public class main {
-    private static final int WIDTH = 300;
-    private static final int HEIGHT = 600;
+    private static final int PROGRAM_WIDTH = 300;
+    private static final int PROGRAM_HEIGHT = 600;
     private static final int SCREEN_WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private static final int SCREEN_HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     
     public static void main(String[] args){     
         System.out.println("Screen dimensions are: " + SCREEN_WIDTH + "x" + SCREEN_HEIGHT);
-        new windowHandler(WIDTH, HEIGHT);
+        System.out.println("Program Window dimensions are: " + PROGRAM_WIDTH + "x" + PROGRAM_HEIGHT);
+        new windowHandler(PROGRAM_WIDTH, PROGRAM_HEIGHT);
     }
 }

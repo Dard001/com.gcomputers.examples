@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.UI;
+package com.gcomputers.SwingUI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -30,13 +30,14 @@ import javax.swing.JTextArea;
  *
  * @author NG @ G-Computers
  */
-public class panelSearchNumbers extends panelTemplate implements ActionListener{
+public class panelSearch extends panelTemplate implements ActionListener{
     private final JTextArea windowContent;
     private final windowHandler wh;
     private final JComboBox dropDown;
-    private JLabel currentResultLinear, currentResultBinary, currentResultJump, currentResultInterpolation;
-    private final String[] intSelection = {"2", "251", "601", "919"};     
+    private JLabel currentResultLinear, currentResultBinary;
+    private final String[] nameSelection = {"Adrian", "Benjamin", "Donald", "George"};    
     private final JPanel borderStart, borderEnd, borderCenter;
+    private final String[] sortedArray = storageText.sortArray(storageText.NAMES);
     
    @Override
     public void actionPerformed(ActionEvent e) {
@@ -46,72 +47,46 @@ public class panelSearchNumbers extends panelTemplate implements ActionListener{
         System.out.println("Search Performed");
         int foundAtLinear;
         timeStarted = System.nanoTime();
-        foundAtLinear = storageNumberSearch.linearSearch(storageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtLinear = storageStringSearch.linearSearch(sortedArray, dropDown.getSelectedItem().toString());
         timeEnded = System.nanoTime();
         long timeTakenLinear = timeEnded- timeStarted;
         
         int foundAtBinary;
         timeStarted = System.nanoTime();
-        foundAtBinary = storageNumberSearch.binarySearch(storageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtBinary = storageStringSearch.binarySearch(sortedArray, dropDown.getSelectedItem().toString());
         timeEnded = System.nanoTime();
         long timeTakenBinary = timeEnded - timeStarted;
         
-        int foundAtJump;
-        timeStarted = System.nanoTime();
-        foundAtJump = storageNumberSearch.jumpSearch(storageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
-        timeEnded = System.nanoTime();
-        long timeTakenJump = timeEnded - timeStarted;
-        
-        int foundAtInterpolation;
-        timeStarted = System.nanoTime();
-        foundAtInterpolation = storageNumberSearch.interpolationSearch(storageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
-        timeEnded = System.nanoTime();
-        long timeTakenInterpolation = timeEnded - timeStarted;
-        
-        this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary, foundAtJump, timeTakenJump, foundAtInterpolation, timeTakenInterpolation);
+        this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary);
     }
     
-    private void addSearchResults(int resultLinear, long timeLinear, int resultBinary, long timeBinary, int resultJump, long timeJump, int resultInterpolation, long timeInterpolation){
+    private void addSearchResults(int resultLinear, long timeLinear, int resultBinary, long timeBinary){
         
         currentResultLinear.setVisible(false);
         currentResultBinary.setVisible(false);
-        currentResultJump.setVisible(false);
-        currentResultInterpolation.setVisible(false);
         
         borderEnd.remove(currentResultLinear);
         borderEnd.remove(currentResultBinary);
-        borderEnd.remove(currentResultJump);
-        borderEnd.remove(currentResultInterpolation);
         
-        currentResultLinear = new JLabel("Linear Integer: " + resultLinear + " in " + timeLinear + " nanoseconds.");
-        currentResultBinary = new JLabel("Binary Integer: " + resultBinary + " in " + timeBinary + " nanoseconds.");
-        currentResultJump = new JLabel("Jump Integer: " + resultJump + " in " + timeJump + " nanoseconds.");
-        currentResultInterpolation = new JLabel("Interpolation Integer: " + resultInterpolation + " in " + timeInterpolation + " nanoseconds.");
+        currentResultLinear = new JLabel("Linear String: " + resultLinear + " in " + timeLinear + " nanoseconds.");
+        currentResultBinary = new JLabel("Binary String: " + resultBinary + " in " + timeBinary + " nanoseconds.");
         
         currentResultLinear.setAlignmentX(JLabel.CENTER);
         currentResultBinary.setAlignmentX(JLabel.CENTER);
-        currentResultJump.setAlignmentX(JLabel.CENTER);
-        currentResultInterpolation.setAlignmentX(JLabel.CENTER);
         
         this.applyTemplateSettings(currentResultLinear);
         this.applyTemplateSettings(currentResultBinary);
-        this.applyTemplateSettings(currentResultJump);
-        this.applyTemplateSettings(currentResultInterpolation);
         
         borderEnd.add(currentResultLinear);
         borderEnd.add(currentResultBinary);
-        borderEnd.add(currentResultJump);
-        borderEnd.add(currentResultInterpolation);
         
         currentResultLinear.setVisible(true);
         currentResultBinary.setVisible(true);
-        currentResultJump.setVisible(true);
-        currentResultInterpolation.setVisible(true);
         
         wh.updateProgram();
     }
     
-    public panelSearchNumbers(windowHandler wh){
+    public panelSearch(windowHandler wh){
         this.wh = wh;
         this.setLayout(new BorderLayout(0,0));
         
@@ -128,20 +103,16 @@ public class panelSearchNumbers extends panelTemplate implements ActionListener{
         
         currentResultLinear = new JLabel("No Search Performed");
         currentResultBinary = new JLabel("No Search Performed");
-        currentResultJump = new JLabel("No Search Performed");
-        currentResultInterpolation = new JLabel("No Search Performed");
         
         borderEnd.add(currentResultLinear);
         borderEnd.add(currentResultBinary);
-        borderEnd.add(currentResultJump);
-        borderEnd.add(currentResultInterpolation);
         
         JLabel label = new JLabel("Search");
         this.applyTemplateSettings(label);
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
         
-        dropDown = new JComboBox(intSelection);
+        dropDown = new JComboBox(nameSelection);
         dropDown.addActionListener(this);
         
         borderStart.add(label);
