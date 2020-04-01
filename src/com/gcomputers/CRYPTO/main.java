@@ -16,13 +16,15 @@
  */
 package com.gcomputers.CRYPTO;
 
+import com.gcomputers.FileIO.fileHandler;
+
 /**
  *
  * @author Dard
  */
 public class main {
     
-    private static final String PLAINTEXT = "This is a test of AES encryption.";
+    private static final String PLAINTEXT = "This is a test of AES encryption. You can put whatever you want in here and it will become encrypted.";
     private static final String ENCRYPTION_KEY = "1234567890";
     private static final String DECRYPTION_KEY = "1234567890";
     private static final String CIPHER_ALGORITHM = "AES/CBC/PKCS5Padding";
@@ -33,13 +35,26 @@ public class main {
         byte[] encryptHash = hashes.getSHA512(ENCRYPTION_KEY, 32);
         byte[] decryptHash = hashes.getSHA512(DECRYPTION_KEY, 32);
         
-        byte[] cipherText = AES.getEncryptedString(PLAINTEXT, encryptHash, CIPHER_ALGORITHM, TEXT_ENCODING, iv);
-        String decryptedText = AES.getDecryptedString(cipherText, decryptHash, CIPHER_ALGORITHM, TEXT_ENCODING, iv);
+        byte[] cipherText = AES.getEncryptedString(PLAINTEXT, encryptHash, CIPHER_ALGORITHM, iv, TEXT_ENCODING);
+        String decryptedText = AES.getDecryptedString(cipherText, decryptHash, CIPHER_ALGORITHM, iv, TEXT_ENCODING);
 
-        System.out.println("EncryptDigest=" + new String(encryptHash));
-        System.out.println("DecryptDigest=" + new String(decryptHash));
-        System.out.println("Original Text=" + PLAINTEXT);
-        System.out.println(new String("Cipher Text=") + new String(cipherText));
-        System.out.println("Decrypted Text=" + decryptedText);
+        System.out.println("EncryptDigest=" + new String(encryptHash) + ", Length="+ encryptHash.length);
+        System.out.println("DecryptDigest=" + new String(decryptHash) + ", Length=" + decryptHash.length);
+        System.out.println("Original Text=" + PLAINTEXT + ", Length=" + PLAINTEXT.length());
+        System.out.println(new String("Cipher Text=") + new String(cipherText) + ", Length=" + cipherText.length);
+        System.out.println("Decrypted Text=" + decryptedText + ", Length=" + decryptedText.length());
+        
+        fileHandler.createFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt");
+        fileHandler.writeToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "Plain Text:");
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", PLAINTEXT, true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "", true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "Hash:", true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", new String(encryptHash), true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "", true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "IV:", true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", new String(iv), true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "", true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", "Encrypted Text:", true);
+        fileHandler.appendToFile("C:\\Users\\Dard\\Desktop\\", "DeleteMe.txt", new String(cipherText), true);
     }
 }

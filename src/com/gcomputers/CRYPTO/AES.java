@@ -38,15 +38,15 @@ import javax.crypto.SecretKey;
 public class AES {
   
     public static byte[] getInitializationVector(){
-        byte[] b = new byte[128/8]; //Get blank byte array
+        byte[] iv = new byte[128/8]; //Get blank byte array
         
         SecureRandom srd = new SecureRandom();
-        srd.nextBytes(b); //Randomize byte array
+        srd.nextBytes(iv); //Randomize byte array
         
-        return b;
+        return iv;
     }
     
-    public static byte[] getEncryptedString(String plainText, byte[] hash, String cipherAlgorithm, String textEncoding, byte[] iv){        
+    public static byte[] getEncryptedString(String plainText, byte[] hash, String cipherAlgorithm, byte[] iv, String textEncoding){        
         try {      
                 SecretKey skey = new SecretKeySpec(hash, "AES"); //Create Secret Key
                 Cipher ci = Cipher.getInstance(cipherAlgorithm); //Get Cipher instance
@@ -60,7 +60,7 @@ public class AES {
         return null;
     }
     
-    public static String getDecryptedString(byte[] cipherText, byte[] hash, String cipherAlgorithm, String textEncoding, byte[] iv){
+    public static String getDecryptedString(byte[] cipherText, byte[] hash, String cipherAlgorithm, byte[] iv, String textEncoding){
         try {
             SecretKey skey = new SecretKeySpec(hash, "AES"); //Create Secret Key
             Cipher ci = Cipher.getInstance(cipherAlgorithm); //Get Cipher instance

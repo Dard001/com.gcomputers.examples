@@ -16,6 +16,7 @@
  */
 package com.gcomputers.SwingUI;
 
+import com.gcomputers.SearchTechniques.storageNumberSearch;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
