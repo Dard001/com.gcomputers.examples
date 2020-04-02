@@ -25,6 +25,7 @@ import javax.swing.JFrame;
 public class MainFrame extends JFrame{
     private final ImageIcon windowIcon = new ImageIcon(getClass().getResource("sourcefiles/ecoIcon.png"));
     
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public MainFrame(int w, int h){
         this.setSize(w, h);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

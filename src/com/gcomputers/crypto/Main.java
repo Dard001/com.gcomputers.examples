@@ -22,7 +22,7 @@ import com.gcomputers.fileio.FileUtils;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     
     private static final String PLAINTEXT = "This is a test of AES encryption. You can put whatever you want in here and it will become encrypted.";
     private static final String ENCRYPTION_KEY = "1234567890";

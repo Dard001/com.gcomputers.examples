@@ -22,7 +22,7 @@ import java.awt.Toolkit;
  *
  * @author NG @ G-Computers
  */
-public class Main {
+public abstract class Main {
     private static final int PROGRAM_WIDTH = 300;
     private static final int PROGRAM_HEIGHT = 600;
     private static final int SCREEN_WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();

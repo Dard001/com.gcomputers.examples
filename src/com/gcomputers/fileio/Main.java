@@ -20,7 +20,7 @@ package com.gcomputers.fileio;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     public static final String USER_PATH = System.getProperty("user.home");
     public static final String PATH_TO_DESKTOP = USER_PATH + "\\Desktop";
     public static final String DIRECTORY_NAME = "Delete_This_Folder";

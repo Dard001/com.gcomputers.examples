@@ -28,7 +28,7 @@ import javafx.stage.Stage;
  *
  * @author Dard
  */
-public class Main extends Application {
+public abstract class Main extends Application {
     
     public static final int PROGRAM_WIDTH = 300;
     public static final int PROGRAM_HEIGHT = 250;

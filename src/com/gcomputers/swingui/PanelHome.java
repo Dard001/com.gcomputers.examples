@@ -24,7 +24,12 @@ import javax.swing.JLabel;
  * @author NG @ G-Computers
  */
 public class PanelHome extends PanelTemplate {
-          
+    
+    private void applySettings(){
+        this.applyTemplateSettings(this);
+    }
+    
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public PanelHome (){
         this.setLayout(new BorderLayout(0,0));
         
@@ -38,7 +43,7 @@ public class PanelHome extends PanelTemplate {
         text.setHorizontalAlignment(JLabel.CENTER);
         text.setVerticalAlignment(JLabel.TOP);
         
-        this.applyTemplateSettings(this);
+        this.applySettings();
         this.add(label, BorderLayout.PAGE_START);
         this.add(text, BorderLayout.CENTER);
         this.validate();

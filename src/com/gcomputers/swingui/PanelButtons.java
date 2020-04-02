@@ -62,6 +62,7 @@ public class PanelButtons extends PanelTemplate implements ActionListener {
         this.add(b3);
         this.add(b4);
         this.add(b5);
+        this.applyTemplateSettings(this);
     }
 
     @Override
@@ -74,11 +75,10 @@ public class PanelButtons extends PanelTemplate implements ActionListener {
         else {wh.exitProgram(1);}
     }
 
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public PanelButtons(WindowHandler wh){
         this.setLayout(new GridLayout(1,5));
-        this.applyTemplateSettings(this);
         this.wh = wh;
-        
         this.setupButtons();
     }
 }

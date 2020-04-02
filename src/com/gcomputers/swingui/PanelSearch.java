@@ -42,6 +42,10 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
     private final JPanel borderEnd;
     private final JPanel borderCenter;
     
+    private void applySettings(){
+        dropDown.addActionListener(this);
+    }
+    
    @Override
     public void actionPerformed(ActionEvent e) {
         long timeStarted;
@@ -88,6 +92,7 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
         wh.updateProgram();
     }
     
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public PanelSearch(WindowHandler wh){
         this.wh = wh;
         this.setLayout(new BorderLayout(0,0));
@@ -115,7 +120,8 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
         label.setVerticalAlignment(JLabel.CENTER);
         
         dropDown = new JComboBox(nameSelection);
-        dropDown.addActionListener(this);
+        
+        this.applySettings();
         
         borderStart.add(label);
         borderStart.add(dropDown);
