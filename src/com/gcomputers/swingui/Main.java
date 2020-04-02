@@ -28,6 +28,7 @@ public abstract class Main {
     private static final int SCREEN_WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
     private static final int SCREEN_HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     
+    @SuppressWarnings("ResultOfObjectAllocationIgnored")
     public static void main(String[] args){     
         System.out.println("Screen dimensions are: " + SCREEN_WIDTH + "x" + SCREEN_HEIGHT);
         System.out.println("Program Window dimensions are: " + PROGRAM_WIDTH + "x" + PROGRAM_HEIGHT);

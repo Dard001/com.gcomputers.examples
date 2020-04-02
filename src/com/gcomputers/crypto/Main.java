@@ -43,7 +43,7 @@ public abstract class Main {
         System.out.println("EncryptDigest=" + new String(encryptHash) + ", Length="+ encryptHash.length);
         System.out.println("DecryptDigest=" + new String(decryptHash) + ", Length=" + decryptHash.length);
         System.out.println("Original Text=" + PLAINTEXT + ", Length=" + PLAINTEXT.length());
-        System.out.println(new String("Cipher Text=") + new String(cipherText) + ", Length=" + cipherText.length);
+        System.out.println("Cipher Text=" + new String(cipherText) + ", Length=" + cipherText.length);
         System.out.println("Decrypted Text=" + decryptedText + ", Length=" + decryptedText.length());
         
         FileUtils.createFile(PATH_TO_DESKTOP, FILE_NAME);
