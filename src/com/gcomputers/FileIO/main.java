@@ -35,6 +35,12 @@ public class main {
         fileHandler.createFile(PATH_TO_SAVE_FOLDER, FILE_NAME);
         fileHandler.writeToFile(PATH_TO_SAVE_FOLDER, FILE_NAME, FILE_CONTENTS);
         fileHandler.appendToFile(PATH_TO_SAVE_FOLDER, FILE_NAME, FILE_CONTENTS_2, WRITE_TO_NEW_LINE);
-        fileHandler.readFile(PATH_TO_SAVE_FOLDER, FILE_NAME);
+//        fileHandler.readFile(PATH_TO_SAVE_FOLDER, FILE_NAME);
+        
+        String[] documentLines = fileHandler.readFile(PATH_TO_SAVE_FOLDER, FILE_NAME);
+        
+        for (int x=0; x < documentLines.length; x++){
+            System.out.println(documentLines[x]);
+        }
     }
 }

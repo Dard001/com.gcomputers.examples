@@ -79,12 +79,19 @@ public class fileHandler {
     }
     //TODO Finish this
     public static String[] readFile(String path, String name){
-        String[] lines = null;
-        int x = 0;
         try {
-            
+            int x = 1;
             File myFile = new File(path + "\\" + name);
             Scanner myReader = new Scanner(myFile);
+            
+            while(myReader.hasNextLine()){
+                x++;
+                myReader.nextLine();
+            }
+            
+            String[] lines = new String[x];
+            
+            x = 0;
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 lines[x] = data;
