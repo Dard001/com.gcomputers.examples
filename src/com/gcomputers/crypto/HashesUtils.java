@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.Crypto;
+package com.gcomputers.crypto;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -27,86 +27,68 @@ import java.util.logging.Logger;
  *
  * @author Dard
  */
-public class hashes {
+public final class HashesUtils {
     public static byte[] getSHA1(String userText, int size){
         
-        MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("SHA-1");
-            byte[] hash = Arrays.copyOf(md.digest(userText.getBytes("UTF-8")), size);
-            return hash;
+            return Arrays.copyOf(MessageDigest.getInstance("SHA-1").digest(userText.getBytes("UTF-8")), size);
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException ex) {
-            Logger.getLogger(hashes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HashesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new byte[0];
     }
     
     public static byte[] getSHA224(String userText, int size){
         
-        MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("SHA-224");
-            byte[] hash = Arrays.copyOf(md.digest(userText.getBytes("UTF-8")), size);
-            return hash;
+            return Arrays.copyOf(MessageDigest.getInstance("SHA-224").digest(userText.getBytes("UTF-8")), size);
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException ex) {
-            Logger.getLogger(hashes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HashesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new byte[0];
     }
         
     public static byte[] getSHA256(String userText, int size){
         
-        MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("SHA-256");
-            byte[] hash = Arrays.copyOf(md.digest(userText.getBytes("UTF-8")), size);
-            return hash;
+            return Arrays.copyOf(MessageDigest.getInstance("SHA-256").digest(userText.getBytes("UTF-8")), size);
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException ex) {
-            Logger.getLogger(hashes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HashesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new byte[0];
     }
     
     public static byte[] getSHA384(String userText, int size){
         
-        MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("SHA-384");
-            byte[] hash = Arrays.copyOf(md.digest(userText.getBytes("UTF-8")), size);
-            return hash;
+            return Arrays.copyOf(MessageDigest.getInstance("SHA-384").digest(userText.getBytes("UTF-8")), size);
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException ex) {
-            Logger.getLogger(hashes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HashesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new byte[0];
     }
         
     public static byte[] getSHA512(String userText, int size){
         
-        MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("SHA-512");
-            byte[] hash = Arrays.copyOf(md.digest(userText.getBytes("UTF-8")), size);
-            return hash;
+            return Arrays.copyOf(MessageDigest.getInstance("SHA-512").digest(userText.getBytes("UTF-8")), size);
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException ex) {
-            Logger.getLogger(hashes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HashesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new byte[0];
     }
         
     public static byte[] getMD5(String userText, int size){
         
-        MessageDigest md = null;
         try {
-            md = MessageDigest.getInstance("MD5");
-            byte[] hash = Arrays.copyOf(md.digest(userText.getBytes("UTF-8")), size);
-            return hash;
+            return Arrays.copyOf(MessageDigest.getInstance("MD5").digest(userText.getBytes("UTF-8")), size);
         } catch (UnsupportedEncodingException | NoSuchAlgorithmException ex) {
-            Logger.getLogger(hashes.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HashesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+        return new byte[0];
     }
     
-    private hashes (){
+    private HashesUtils (){
         System.exit(-1);
     }
 }

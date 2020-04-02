@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.FileIO;
+package com.gcomputers.fileio;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -28,7 +28,7 @@ import java.util.logging.Logger;
  *
  * @author Dard
  */
-public class fileHandler {
+public final class FileUtils {
     
     public static void makeDirectory(String path){
         File myDir = new File(path);
@@ -62,7 +62,7 @@ public class fileHandler {
                 System.out.println("File already exists");
             }
         } catch (IOException ex) {
-            Logger.getLogger(fileHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -74,7 +74,7 @@ public class fileHandler {
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException ex) {
-            Logger.getLogger(fileHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     //TODO Finish this
@@ -101,9 +101,9 @@ public class fileHandler {
             myReader.close();
             return lines;
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(fileHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileUtils.class.getName()).log(Level.SEVERE, null, ex);
         }  
-        return null;
+        return new String[0];
     }
     
     public static void appendToFile(String path, String name, String contents, Boolean newLine){
@@ -117,11 +117,11 @@ public class fileHandler {
             myWriter.close();
             System.out.println("Successfully appended to the file.");
         } catch (IOException ex) {
-            Logger.getLogger(fileHandler.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(FileUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    private fileHandler(){
+    private FileUtils(){
         System.exit(-1);
     }
 }

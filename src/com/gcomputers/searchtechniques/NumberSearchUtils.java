@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.SearchTechniques;
+package com.gcomputers.searchtechniques;
 
 import java.util.Arrays;
 
@@ -22,17 +22,18 @@ import java.util.Arrays;
  *
  * @author NG @ G-Computers
  */
-public class storageNumberSearch {
+public final class NumberSearchUtils {
     
-    public static final int linearSearch(int[] arr, int elementToSearch){
+    public static int linearSearch(int[] arr, int elementToSearch){
         for (int index = 0; index < arr.length; index++) {
-            if (arr[index] == elementToSearch)
+            if (arr[index] == elementToSearch) {
                 return index;
+            }
         }
         return -1;
     }
     
-    public static final int binarySearch(int[] arr, int elementToSearch){
+    public static int binarySearch(int[] arr, int elementToSearch){
         int firstIndex = 0;
         int lastIndex = arr.length - 1;
 
@@ -46,19 +47,21 @@ public class storageNumberSearch {
 
             // if the middle element is smaller
             // point our index to the middle+1, taking the first half out of consideration
-            else if (arr[middleIndex] < elementToSearch)
+            else if (arr[middleIndex] < elementToSearch){
                 firstIndex = middleIndex + 1;
+            }
 
             // if the middle element is bigger
             // point our index to the middle-1, taking the second half out of consideration
-            else if (arr[middleIndex] > elementToSearch)
+            else if (arr[middleIndex] > elementToSearch){
                 lastIndex = middleIndex - 1;
+            }
 
         }
         return -1;
     }
     
-    public static final int jumpSearch(int[] arr, int elementToSearch){
+    public static int jumpSearch(int[] arr, int elementToSearch){
         int arrayLength = arr.length;
         int jumpStep = (int) Math.sqrt(arr.length);
         int previousStep = 0;
@@ -66,48 +69,56 @@ public class storageNumberSearch {
         while (arr[Math.min(jumpStep, arrayLength) - 1] < elementToSearch) {
             previousStep = jumpStep;
             jumpStep += (int)(Math.sqrt(arrayLength));
-            if (previousStep >= arrayLength)
+            if (previousStep >= arrayLength){
                 return -1;
+            }
         }
         while (arr[previousStep] < elementToSearch) {
             previousStep++;
-            if (previousStep == Math.min(jumpStep, arrayLength))
+            if (previousStep == Math.min(jumpStep, arrayLength)){
                 return -1;
+            }
         }
 
-        if (arr[previousStep] == elementToSearch)
+        if (arr[previousStep] == elementToSearch){
             return previousStep;
+        }
         return -1;
     }
     
     public static int interpolationSearch(int[] arr, int elementToSearch){    
         int startIndex = 0;
-        int lastIndex = (arr.length - 1);
+        int lastIndex = arr.length - 1;
 
-        while ((startIndex <= lastIndex) && (elementToSearch >= arr[startIndex]) &&
-               (elementToSearch <= arr[lastIndex])) {
+        while (startIndex <= lastIndex && elementToSearch >= arr[startIndex] &&
+               elementToSearch <= arr[lastIndex]) {
             // using interpolation formulae to find the best probable position for this element to exist
             int pos = startIndex + (((lastIndex-startIndex) /
               (arr[lastIndex]-arr[startIndex]))*
                             (elementToSearch - arr[startIndex]));
 
-            if (arr[pos] == elementToSearch)
+            if (arr[pos] == elementToSearch){
                 return pos;
+            }
 
-            if (arr[pos] < elementToSearch)
+            if (arr[pos] < elementToSearch){
                 startIndex = pos + 1;
+            }
 
-            else
+            else {
                 lastIndex = pos - 1;
+            }
         }
         return -1;
     }
     
     public static int exponentialSearch(int[] arr, int elementToSearch){
-        if (arr[0] == elementToSearch)
+        if (arr[0] == elementToSearch){
             return 0;
-        if (arr[arr.length - 1] == elementToSearch)
+        }
+        if (arr[arr.length - 1] == elementToSearch){
             return arr.length;
+        }
 
         int range = 1;
 
@@ -147,17 +158,19 @@ public class storageNumberSearch {
                 fibonacciMinus1 = fibonacciMinus1 - fibonacciMinus2;
                 fibonacciMinus2 = fibonacciNumber - fibonacciMinus1;
             }
-
-            else return i;
+            else {
+                return i;
+            }
         }
 
-        if (fibonacciMinus1 == 1 && arr[offset+1] == elementToSearch)
+        if (fibonacciMinus1 == 1 && arr[offset+1] == elementToSearch){
             return offset+1;
+        }
 
         return -1;
     }
     
-    private storageNumberSearch(){
+    private NumberSearchUtils(){
         System.exit(1);
     }
 }

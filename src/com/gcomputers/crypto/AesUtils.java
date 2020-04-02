@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.Crypto;
+package com.gcomputers.crypto;
 
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidAlgorithmParameterException;
@@ -35,7 +35,7 @@ import javax.crypto.SecretKey;
  *
  * @author Dard
  */
-public class AES {
+public final class AesUtils {
   
     public static byte[] getInitializationVector(){
         byte[] iv = new byte[128/8]; //Get blank byte array
@@ -55,9 +55,9 @@ public class AES {
                 return ci.doFinal(plainText.getBytes(textEncoding));
                 
             } catch (NoSuchPaddingException | UnsupportedEncodingException | NoSuchAlgorithmException | InvalidKeyException | InvalidAlgorithmParameterException | IllegalBlockSizeException | BadPaddingException ex) {
-                Logger.getLogger(AES.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(AesUtils.class.getName()).log(Level.SEVERE, null, ex);
             }
-        return null;
+        return new byte[0];
     }
     
     public static String getDecryptedString(byte[] cipherText, byte[] hash, String cipherAlgorithm, byte[] iv, String textEncoding){
@@ -69,12 +69,12 @@ public class AES {
             return new String(ci.doFinal(cipherText));
             
         } catch (NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | NoSuchAlgorithmException | IllegalBlockSizeException | BadPaddingException ex) {
-            Logger.getLogger(AES.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AesUtils.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
 
-    private AES(){  
+    private AesUtils(){  
         System.exit(-1);
     }
 }

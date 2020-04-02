@@ -14,26 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.SearchTechniques;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.gcomputers.searchtechniques;
 
 /**
  *
  * @author NG @ G-Computers
  */
-public class storageStringSearch {
+public final class StringSearchUtils {
     
-    public static final int linearSearch(String[] arr, String elementToSearch){
+    public static int linearSearch(String[] arr, String elementToSearch){
         for (int index = 0; index < arr.length; index++) {
-            if (arr[index].equals(elementToSearch))
+            if (arr[index].equals(elementToSearch)){
                 return index; 
+            }
         }
         return -1;
     }
     
-    public static final int binarySearch(String[] arr, String elementToSearch){
+    public static int binarySearch(String[] arr, String elementToSearch){
         int start = 0; 
         int end = arr.length - 1;
         while (start <= end)
@@ -56,27 +54,27 @@ public class storageStringSearch {
         return -1;
     }
     
-    public static final int simpleSearch(String[] arr, String elementToSearch){
+    public static int simpleSearch(String[] arr, String elementToSearch){
         return -1;
     }
     
-    public static final int rabinKarpSearch(String[] arr, String elementToSearch){
+    public static int rabinKarpSearch(String[] arr, String elementToSearch){
         return -1;
     }
     
-    public static final int knuthMorissPrattSearch(String[] arr, String elementToSearch){
+    public static int knuthMorissPrattSearch(String[] arr, String elementToSearch){
         return -1;
     }
     
-    public static final int simpleBoyerMooreSearch(String[] arr, String elementToSearch){
+    public static int simpleBoyerMooreSearch(String[] arr, String elementToSearch){
         return -1;
     }
     
-    public static final int boyerMooreHorspoolSearch(String[] arr, String elementToSearch){
+    public static int boyerMooreHorspoolSearch(String[] arr, String elementToSearch){
         return -1;
     }
         
-    private storageStringSearch(){
+    private StringSearchUtils(){
         System.exit(1);
     }
 }
