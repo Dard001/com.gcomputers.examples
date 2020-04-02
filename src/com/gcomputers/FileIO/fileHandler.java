@@ -30,6 +30,28 @@ import java.util.logging.Logger;
  */
 public class fileHandler {
     
+    public static void makeDirectory(String path){
+        File myDir = new File(path);
+        
+        if (!myDir.exists()){
+            myDir.mkdirs();
+            System.out.println("Directory created: " + path);
+        } else {
+            System.out.println("Directory already exists");
+        }
+    }
+    
+    public static void makeDirectory(String path, String name){
+        File myDir = new File(path + "\\" + name);
+        
+        if (!myDir.exists()){
+            myDir.mkdir();
+            System.out.println("Directory created: " + path + "\\" + name);
+        } else {
+            System.out.println("Directory already exists");
+        }
+    }
+    
     public static void createFile(String path, String name){
         File myFile = new File(path + "\\" + name);
         
@@ -55,20 +77,26 @@ public class fileHandler {
             Logger.getLogger(fileHandler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    public static void readFile(String path, String name){
-        
+    //TODO Finish this
+    public static String[] readFile(String path, String name){
+        String[] lines = null;
+        int x = 0;
         try {
+            
             File myFile = new File(path + "\\" + name);
             Scanner myReader = new Scanner(myFile);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                System.out.println(data);
+                lines[x] = data;
+                System.out.println(lines[x]);
+                x++;
             }
             myReader.close();
+            return lines;
         } catch (FileNotFoundException ex) {
             Logger.getLogger(fileHandler.class.getName()).log(Level.SEVERE, null, ex);
         }  
+        return null;
     }
     
     public static void appendToFile(String path, String name, String contents, Boolean newLine){
