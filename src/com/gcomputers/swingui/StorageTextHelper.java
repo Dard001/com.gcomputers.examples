@@ -22,7 +22,7 @@ import java.util.Arrays;
  *
  * @author NG @ G-Computers
  */
-public final class StorageText {
+public final class StorageTextHelper {
     public static final String DESCRIPTION = "This is an example of a user interface.";
     
     public static final String[] NAMES = {"David","John","Paul","Mark","James","Andrew","Scott","Steven","Robert","Stephen","William","Craig",
@@ -52,7 +52,7 @@ public final class StorageText {
     }
     
     //Prevent instantiation of the class
-    private StorageText(){
+    private StorageTextHelper(){
         System.exit(1);
     }
 }

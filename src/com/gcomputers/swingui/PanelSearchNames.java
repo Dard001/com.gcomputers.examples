@@ -31,16 +31,13 @@ import javax.swing.JTextArea;
  *
  * @author NG @ G-Computers
  */
-public class PanelSearch extends PanelTemplate implements ActionListener{
+public class PanelSearchNames extends PanelTemplate implements ActionListener{
     private final WindowHandler wh;
     private final JComboBox dropDown;
     private JLabel currentResultLinear;
     private JLabel currentResultBinary;
     private final String[] nameSelection = {"Adrian", "Benjamin", "Donald", "George"};   
-    private final String[] sortedArray = StorageText.sortArray(StorageText.NAMES);
-    private final JPanel borderStart;
-    private final JPanel borderEnd;
-    private final JPanel borderCenter;
+    private final String[] sortedArray = StorageTextHelper.sortArray(StorageTextHelper.NAMES);
     
     private void applySettings(){
         dropDown.addActionListener(this);
@@ -64,15 +61,16 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
         timeEnded = System.nanoTime();
         long timeTakenBinary = timeEnded - timeStarted;
         
-        this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary);
+        this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary, this);
     }
     
-    private void addSearchResults(int resultLinear, long timeLinear, int resultBinary, long timeBinary){
+    private void addSearchResults(int resultLinear, long timeLinear, int resultBinary, long timeBinary, JPanel panel){
+        panel = (JPanel) panel.getComponent(2);
         currentResultLinear.setVisible(false);
         currentResultBinary.setVisible(false);
         
-        borderEnd.remove(currentResultLinear);
-        borderEnd.remove(currentResultBinary);
+        panel.remove(currentResultLinear);
+        panel.remove(currentResultBinary);
         
         currentResultLinear = new JLabel("Linear String: " + resultLinear + " in " + timeLinear + " nanoseconds.");
         currentResultBinary = new JLabel("Binary String: " + resultBinary + " in " + timeBinary + " nanoseconds.");
@@ -83,8 +81,8 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
         this.applyTemplateSettings(currentResultLinear);
         this.applyTemplateSettings(currentResultBinary);
         
-        borderEnd.add(currentResultLinear);
-        borderEnd.add(currentResultBinary);
+        panel.add(currentResultLinear);
+        panel.add(currentResultBinary);
         
         currentResultLinear.setVisible(true);
         currentResultBinary.setVisible(true);
@@ -93,15 +91,15 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
     }
     
     @SuppressWarnings("OverridableMethodCallInConstructor")
-    public PanelSearch(WindowHandler wh){
+    public PanelSearchNames(WindowHandler wh){
         this.wh = wh;
         this.setLayout(new BorderLayout(0,0));
                 
-        borderStart = new JPanel();
+        JPanel borderStart = new JPanel();
         borderStart.setLayout(new GridLayout(2,1));
-        borderCenter = new JPanel();
+        JPanel borderCenter = new JPanel();
         borderCenter.setLayout(new GridLayout(1,1));
-        borderEnd = new JPanel();
+        JPanel borderEnd = new JPanel();
         borderEnd.setLayout(new GridLayout(10,1));
         
         this.applyTemplateSettings(borderStart);
@@ -121,8 +119,6 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
         
         dropDown = new JComboBox(nameSelection);
         
-        this.applySettings();
-        
         borderStart.add(label);
         borderStart.add(dropDown);
         
@@ -134,12 +130,12 @@ public class PanelSearch extends PanelTemplate implements ActionListener{
         windowContent.setBackground(Color.BLACK);
         borderCenter.add(windowContent);
         
-       // this.applyTemplateSettings(this);
+        this.applySettings();
 
         this.add(borderStart, BorderLayout.PAGE_START);
         this.add(borderCenter, BorderLayout.CENTER);
         this.add(borderEnd, BorderLayout.PAGE_END);   
-        this.validate();
+        this.validate(); 
     }
 
 

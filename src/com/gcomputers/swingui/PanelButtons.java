@@ -27,16 +27,6 @@ import javax.swing.JButton;
  * @author NG @ G-Computers
  */
 public class PanelButtons extends PanelTemplate implements ActionListener {
-    private final ImageIcon homeButton = new ImageIcon(getClass().getResource("sourcefiles/homeIcon.png"));
-    private final ImageIcon homeButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/homeIconPressed.png"));
-    private final ImageIcon settingsButton = new ImageIcon(getClass().getResource("sourcefiles/settingsIcon.png"));
-    private final ImageIcon settingsButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/settingsIconPressed.png"));
-    private final ImageIcon exitButton = new ImageIcon(getClass().getResource("sourcefiles/powerIcon.png"));
-    private final ImageIcon exitButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/powerIconPressed.png"));
-    private final ImageIcon searchButton = new ImageIcon(getClass().getResource("sourcefiles/searchIcon.png"));
-    private final ImageIcon searchButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/searchIconPressed.png"));
-    private final ImageIcon searchButtonNumbers = new ImageIcon(getClass().getResource("sourcefiles/searchIconNumbers.png"));
-    private final ImageIcon searchButtonNumbersPressed = new ImageIcon(getClass().getResource("sourcefiles/searchIconNumbersPressed.png"));
     private final JButton b1 = new JButton();
     private final JButton b2 = new JButton();
     private final JButton b3 = new JButton();
@@ -45,6 +35,17 @@ public class PanelButtons extends PanelTemplate implements ActionListener {
     private final WindowHandler wh;
 
     private void setupButtons(){
+        ImageIcon homeButton = new ImageIcon(getClass().getResource("sourcefiles/homeIcon.png"));
+        ImageIcon homeButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/homeIconPressed.png"));
+        ImageIcon settingsButton = new ImageIcon(getClass().getResource("sourcefiles/settingsIcon.png"));
+        ImageIcon settingsButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/settingsIconPressed.png"));
+        ImageIcon exitButton = new ImageIcon(getClass().getResource("sourcefiles/powerIcon.png"));
+        ImageIcon exitButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/powerIconPressed.png"));
+        ImageIcon searchButton = new ImageIcon(getClass().getResource("sourcefiles/searchIcon.png"));
+        ImageIcon searchButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/searchIconPressed.png"));
+        ImageIcon searchButtonNumbers = new ImageIcon(getClass().getResource("sourcefiles/searchIconNumbers.png"));
+        ImageIcon searchButtonNumbersPressed = new ImageIcon(getClass().getResource("sourcefiles/searchIconNumbersPressed.png"));
+        
         this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50);
         this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50);
         this.applyButtonSettings(b3, searchButton, searchButtonPressed, 50, 50);

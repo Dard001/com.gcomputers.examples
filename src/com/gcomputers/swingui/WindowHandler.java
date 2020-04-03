@@ -30,7 +30,7 @@ public class WindowHandler {
     private final MainFrame f;
     private final PanelHome home;
     private final PanelSettings settings;
-    private final PanelSearch search;
+    private final PanelSearchNames searchNames;
     private final PanelSearchNumbers searchNumbers;
 
     private JPanel currentPanel;
@@ -60,8 +60,8 @@ public class WindowHandler {
         switch(action){
             case 1: System.out.println("Home Button Pressed"); setActivePanel(home); break;
             case 2: System.out.println("Settings Button Pressed"); setActivePanel(settings); break;
-            case 3: System.out.println("Search Button Pressed"); setActivePanel(search); break;
-            case 4: System.out.println("Search Button Pressed"); setActivePanel(searchNumbers); break;
+            case 3: System.out.println("Search Names Button Pressed"); setActivePanel(searchNames); break;
+            case 4: System.out.println("Search Numbers Button Pressed"); setActivePanel(searchNumbers); break;
             case 5: exitProgram(0); break;
             default: exitProgram(1); break;
         }
@@ -73,7 +73,7 @@ public class WindowHandler {
         PanelButtons buttons = new PanelButtons(this);
         home = new PanelHome();
         settings = new PanelSettings();
-        search = new PanelSearch(this);
+        searchNames = new PanelSearchNames(this);
         searchNumbers = new PanelSearchNumbers(this);
         f.add(buttons, BorderLayout.PAGE_START);
         f.add(home, BorderLayout.CENTER);

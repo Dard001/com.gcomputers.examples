@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 NG @ g-computers
+ * Copyright (C) 2020 Dard
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,23 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.swingui;
+package com.gcomputers.factorypattern;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 /**
  *
- * @author NG @ G-Computers
+ * @author Dard
  */
-public class MainFrame extends JFrame{
-    
-    @SuppressWarnings("OverridableMethodCallInConstructor")
-    public MainFrame(int w, int h){
-        this.setSize(w, h);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Playground Program");
-        this.setLocationRelativeTo(null);
-        this.setIconImage(new ImageIcon(getClass().getResource("sourcefiles/ecoIcon.png")).getImage()); //materials.io
-        this.setResizable(false);
+public class Plane extends Vehicle{
+    protected void construct(){
+        System.out.println("Building Plane");
+        //Do Stuff
+    }
+    public Plane() {
+        super(VehicleType.PLANE);
+        construct();
     }
 }

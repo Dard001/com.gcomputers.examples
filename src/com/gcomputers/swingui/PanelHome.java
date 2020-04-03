@@ -38,7 +38,7 @@ public class PanelHome extends PanelTemplate {
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.TOP);
         
-        JLabel text = new JLabel(StorageText.DESCRIPTION);
+        JLabel text = new JLabel(StorageTextHelper.DESCRIPTION);
         this.applyTemplateSettings(text);
         text.setHorizontalAlignment(JLabel.CENTER);
         text.setVerticalAlignment(JLabel.TOP);

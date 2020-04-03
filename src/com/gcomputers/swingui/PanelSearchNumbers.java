@@ -42,9 +42,6 @@ public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
     private JLabel currentResultExponential;
     private JLabel currentResultFibonacci;
     private final String[] intSelection = {"2", "251", "601", "919"};     
-    private final JPanel borderStart;
-    private final JPanel borderEnd;
-    private final JPanel borderCenter;
    
     private void applySettings(){
         this.applyTemplateSettings(this);
@@ -59,44 +56,45 @@ public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
         System.out.println("Search Performed");
         int foundAtLinear;
         timeStarted = System.nanoTime();
-        foundAtLinear = NumberSearchUtils.linearSearch(StorageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtLinear = NumberSearchUtils.linearSearch(StorageTextHelper.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
         timeEnded = System.nanoTime();
         long timeTakenLinear = timeEnded- timeStarted;
         
         int foundAtBinary;
         timeStarted = System.nanoTime();
-        foundAtBinary = NumberSearchUtils.binarySearch(StorageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtBinary = NumberSearchUtils.binarySearch(StorageTextHelper.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
         timeEnded = System.nanoTime();
         long timeTakenBinary = timeEnded - timeStarted;
         
         int foundAtJump;
         timeStarted = System.nanoTime();
-        foundAtJump = NumberSearchUtils.jumpSearch(StorageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtJump = NumberSearchUtils.jumpSearch(StorageTextHelper.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
         timeEnded = System.nanoTime();
         long timeTakenJump = timeEnded - timeStarted;
         
         int foundAtInterpolation;
         timeStarted = System.nanoTime();
-        foundAtInterpolation = NumberSearchUtils.interpolationSearch(StorageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtInterpolation = NumberSearchUtils.interpolationSearch(StorageTextHelper.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
         timeEnded = System.nanoTime();
         long timeTakenInterpolation = timeEnded - timeStarted;
         
         int foundAtExponential;
         timeStarted = System.nanoTime();
-        foundAtExponential = NumberSearchUtils.interpolationSearch(StorageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtExponential = NumberSearchUtils.interpolationSearch(StorageTextHelper.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
         timeEnded = System.nanoTime();
         long timeTakenExponential = timeEnded - timeStarted;
         
         int foundAtFibonacci;
         timeStarted = System.nanoTime();
-        foundAtFibonacci = NumberSearchUtils.interpolationSearch(StorageText.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
+        foundAtFibonacci = NumberSearchUtils.interpolationSearch(StorageTextHelper.NUMBERS, Integer.parseInt(dropDown.getSelectedItem().toString()));
         timeEnded = System.nanoTime();
         long timeTakenFibonacci = timeEnded - timeStarted;
         
-        this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary, foundAtJump, timeTakenJump, foundAtInterpolation, timeTakenInterpolation, foundAtExponential, timeTakenExponential, foundAtFibonacci, timeTakenFibonacci);
+        this.addSearchResults(foundAtLinear, timeTakenLinear, foundAtBinary, timeTakenBinary, foundAtJump, timeTakenJump, foundAtInterpolation, timeTakenInterpolation, foundAtExponential, timeTakenExponential, foundAtFibonacci, timeTakenFibonacci, this);
     }
     
-    private void addSearchResults(int resultLinear, long timeLinear, int resultBinary, long timeBinary, int resultJump, long timeJump, int resultInterpolation, long timeInterpolation, int resultExponential, long timeExponential, int resultFibonacci, long timeFibonacci){
+    private void addSearchResults(int resultLinear, long timeLinear, int resultBinary, long timeBinary, int resultJump, long timeJump, int resultInterpolation, long timeInterpolation, int resultExponential, long timeExponential, int resultFibonacci, long timeFibonacci, JPanel panel){
+        panel = (JPanel) panel.getComponent(2);
         
         currentResultLinear.setVisible(false);
         currentResultBinary.setVisible(false);
@@ -105,12 +103,12 @@ public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
         currentResultExponential.setVisible(false);
         currentResultFibonacci.setVisible(false);
         
-        borderEnd.remove(currentResultLinear);
-        borderEnd.remove(currentResultBinary);
-        borderEnd.remove(currentResultJump);
-        borderEnd.remove(currentResultInterpolation);
-        borderEnd.remove(currentResultExponential);
-        borderEnd.remove(currentResultFibonacci);
+        panel.remove(currentResultLinear);
+        panel.remove(currentResultBinary);
+        panel.remove(currentResultJump);
+        panel.remove(currentResultInterpolation);
+        panel.remove(currentResultExponential);
+        panel.remove(currentResultFibonacci);
         
         currentResultLinear = new JLabel("Linear Integer: " + resultLinear + " in " + timeLinear + " nanoseconds.");
         currentResultBinary = new JLabel("Binary Integer: " + resultBinary + " in " + timeBinary + " nanoseconds.");
@@ -133,12 +131,12 @@ public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
         this.applyTemplateSettings(currentResultExponential);
         this.applyTemplateSettings(currentResultFibonacci);
         
-        borderEnd.add(currentResultLinear);
-        borderEnd.add(currentResultBinary);
-        borderEnd.add(currentResultJump);
-        borderEnd.add(currentResultInterpolation);
-        borderEnd.add(currentResultExponential);
-        borderEnd.add(currentResultFibonacci);
+        panel.add(currentResultLinear);
+        panel.add(currentResultBinary);
+        panel.add(currentResultJump);
+        panel.add(currentResultInterpolation);
+        panel.add(currentResultExponential);
+        panel.add(currentResultFibonacci);
         
         currentResultLinear.setVisible(true);
         currentResultBinary.setVisible(true);
@@ -151,15 +149,15 @@ public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
     }
     
     @SuppressWarnings("OverridableMethodCallInConstructor")
-    public PanelSearchNumbers(WindowHandler wh){
+    public PanelSearchNumbers(WindowHandler wh){      
         this.wh = wh;
         this.setLayout(new BorderLayout(0,0));
         
-        borderStart = new JPanel();
+        JPanel borderStart = new JPanel();
         borderStart.setLayout(new GridLayout(2,1));
-        borderCenter = new JPanel();
+        JPanel borderCenter = new JPanel();
         borderCenter.setLayout(new GridLayout(1,1));
-        borderEnd = new JPanel();
+        JPanel borderEnd = new JPanel();
         borderEnd.setLayout(new GridLayout(10,1));
         
         this.applyTemplateSettings(borderStart);
