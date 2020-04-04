@@ -14,23 +14,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.swingui;
+package com.gcomputers.ui.swing;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import javax.swing.JLabel;
+
 /**
  *
  * @author NG @ G-Computers
  */
-public class MainFrame extends JFrame{
+public class PanelSettings extends PanelTemplate {
+    
+    private void applySettings(){
+        this.applyTemplateSettings(this);
+    }
     
     @SuppressWarnings("OverridableMethodCallInConstructor")
-    public MainFrame(int w, int h){
-        this.setSize(w, h);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Playground Program");
-        this.setLocationRelativeTo(null);
-        this.setIconImage(new ImageIcon(getClass().getResource("sourcefiles/ecoIcon.png")).getImage()); //materials.io
-        this.setResizable(false);
+    public PanelSettings(){ 
+        this.setLayout(new BorderLayout(0,0));
+                
+        JLabel label = new JLabel("Settings");
+        this.applyTemplateSettings(label);
+        label.setHorizontalAlignment(JLabel.CENTER);
+        label.setVerticalAlignment(JLabel.CENTER);
+        
+        this.applySettings();
+        this.add(label, BorderLayout.PAGE_START);
+
+        this.validate();
     }
 }

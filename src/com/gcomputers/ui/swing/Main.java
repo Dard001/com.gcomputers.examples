@@ -14,33 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.swingui;
+package com.gcomputers.ui.swing;
 
-import java.awt.BorderLayout;
-import javax.swing.JLabel;
+import java.awt.Toolkit;
 
 /**
  *
  * @author NG @ G-Computers
  */
-public class PanelSettings extends PanelTemplate {
+public abstract class Main {
+    private static final int PROGRAM_WIDTH = 300;
+    private static final int PROGRAM_HEIGHT = 600;
+    private static final int SCREEN_WIDTH = (int) Toolkit.getDefaultToolkit().getScreenSize().getWidth();
+    private static final int SCREEN_HEIGHT = (int) Toolkit.getDefaultToolkit().getScreenSize().getHeight();
     
-    private void applySettings(){
-        this.applyTemplateSettings(this);
-    }
-    
-    @SuppressWarnings("OverridableMethodCallInConstructor")
-    public PanelSettings(){ 
-        this.setLayout(new BorderLayout(0,0));
-                
-        JLabel label = new JLabel("Settings");
-        this.applyTemplateSettings(label);
-        label.setHorizontalAlignment(JLabel.CENTER);
-        label.setVerticalAlignment(JLabel.CENTER);
-        
-        this.applySettings();
-        this.add(label, BorderLayout.PAGE_START);
-
-        this.validate();
+    @SuppressWarnings("ResultOfObjectAllocationIgnored")
+    public static void main(String[] args){     
+        System.out.println("Screen dimensions are: " + SCREEN_WIDTH + "x" + SCREEN_HEIGHT);
+        System.out.println("Program Window dimensions are: " + PROGRAM_WIDTH + "x" + PROGRAM_HEIGHT);
+        new WindowHandler(PROGRAM_WIDTH, PROGRAM_HEIGHT);
     }
 }

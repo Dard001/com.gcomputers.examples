@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.swingui;
+package com.gcomputers.ui.swing;
 
 import com.gcomputers.utilities.searchtechniques.StringSearchUtils;
 import java.awt.BorderLayout;
