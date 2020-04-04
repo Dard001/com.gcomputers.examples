@@ -32,7 +32,6 @@ import javax.swing.JTextArea;
  * @author NG @ G-Computers
  */
 public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
-    private final JTextArea windowContent;
     private final WindowHandler wh;
     private final JComboBox dropDown;
     private JLabel currentResultLinear;
@@ -188,7 +187,7 @@ public class PanelSearchNumbers extends PanelTemplate implements ActionListener{
         borderStart.add(label);
         borderStart.add(dropDown);
       
-        windowContent = new JTextArea("Searching for Strings and Integers.");
+        JTextArea windowContent = new JTextArea("Searching for Strings and Integers.");
         windowContent.setLineWrap(true);
         windowContent.setEditable(false);
         windowContent.setForeground(Color.WHITE);

@@ -21,5 +21,5 @@ package com.gcomputers.pattern.bridge;
  * @author Dard
  */
 interface VehicleMake {
-    abstract public void build();
+    void build();
 }

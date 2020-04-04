@@ -20,7 +20,7 @@ package com.gcomputers.pattern.factory;
  *
  * @author Dard
  */
-public class VehicleFactory {
+public final class VehicleFactoryHelper {
     public static Vehicle buildVehicle(VehicleType type){
         Vehicle vehicle = null;
         switch(type){
@@ -44,5 +44,9 @@ public class VehicleFactory {
                 break;
         }
         return vehicle;
+    }
+    
+    private VehicleFactoryHelper(){
+        System.exit(-1);
     }
 }

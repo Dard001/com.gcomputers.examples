@@ -20,13 +20,13 @@ package com.gcomputers.pattern.factory;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     
     public static void main(String[] args){
-        System.out.println(VehicleFactory.buildVehicle(VehicleType.BOAT));
-        System.out.println(VehicleFactory.buildVehicle(VehicleType.CAR));
-        System.out.println(VehicleFactory.buildVehicle(VehicleType.MOTORCYCLE));
-        System.out.println(VehicleFactory.buildVehicle(VehicleType.PLANE));
-        System.out.println(VehicleFactory.buildVehicle(VehicleType.TRUCK));
+        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.BOAT));
+        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.CAR));
+        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.MOTORCYCLE));
+        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.PLANE));
+        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.TRUCK));
     }
 }

@@ -21,7 +21,7 @@ package com.gcomputers.pattern.adapter;
  * @author Dard
  */
 interface MotorVehicle{
-    public void startEngine();
-    public void move();
+    void startEngine();
+    void move();
 }
 

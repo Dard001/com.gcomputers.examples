@@ -21,5 +21,5 @@ package com.gcomputers.pattern.adapter;
  * @author Dard
  */
 interface NonMotorVehicle {
-    public void move();
+    void move();
 }

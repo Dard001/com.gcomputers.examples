@@ -20,7 +20,7 @@ package com.gcomputers.pattern.bridge;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     public static void main(String[] args){
         Vehicle vehicle1 = new Car(new Manufacture(), new Dealership());
         vehicle1.build();
