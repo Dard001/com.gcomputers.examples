@@ -14,19 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.factorypattern;
+package com.gcomputers.pattern.bridge;
 
 /**
  *
  * @author Dard
  */
-public class Car extends Vehicle{
-    protected void construct(){
-        System.out.println("Building Car");
-        //Do Stuff
-    }
-    public Car() {
-        super(VehicleType.CAR);
-        construct();
+public class Dealership implements VehicleType, VehicleMake{
+    public void build(){
+        System.out.print(" and");
+        System.out.print(" sold.");
     }
 }

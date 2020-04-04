@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.crypto;
+package com.gcomputers.utlities.crypto;
 
-import com.gcomputers.fileio.FileUtils;
+import com.gcomputers.utilities.fileio.FileUtils;
 
 /**
  *

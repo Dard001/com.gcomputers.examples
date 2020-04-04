@@ -3,19 +3,35 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelButtons.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelSearchNames.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelTemplate.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/MainFrame.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/StorageTextHelper.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/adapterpattern/VehicleAdapter.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Truck.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Motorcycle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/adapterpattern/NonMotorVehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelHome.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Plane.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/VehicleFactory.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelButtons.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelSearchNames.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Car.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelTemplate.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/crypto/AesUtils.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelSearchNumbers.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/adapterpattern/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/adapterpattern/MotorVehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/searchtechniques/StringSearchUtils.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/searchtechniques/NumberSearchUtils.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelSettings.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/PanelHome.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/Boat.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/factorypattern/VehicleType.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/crypto/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/adapterpattern/Skateboard.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/swingui/WindowHandler.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/adapterpattern/Car.java</file>
         </group>
     </open-files>
 </project-private>

@@ -14,32 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.factorypattern;
+package com.gcomputers.pattern.bridge;
 
 /**
  *
  * @author Dard
  */
-public abstract class Vehicle {
-
-    private VehicleType type = null;
-    
-    protected abstract void construct();
-    
-    public VehicleType getType(){
-        return type;
-    }
-    
-    public void setType(VehicleType type){
-        this.type = type;
-    }
-    
-    private void setupVehicle(){
-        //do stuff here
-    }
-    
-    public Vehicle(VehicleType type){
-        this.type = type;
-        setupVehicle();
+public class Main {
+    public static void main(String[] args){
+        Vehicle vehicle1 = new Car(new Manufacture(), new Dealership());
+        vehicle1.build();
+        System.out.println("");
+        Vehicle vehicle2 = new Truck(new Manufacture(), new Dealership());
+        vehicle2.build();
     }
 }

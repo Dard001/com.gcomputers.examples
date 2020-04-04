@@ -16,7 +16,7 @@
  */
 package com.gcomputers.swingui;
 
-import com.gcomputers.searchtechniques.NumberSearchUtils;
+import com.gcomputers.utilities.searchtechniques.NumberSearchUtils;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
