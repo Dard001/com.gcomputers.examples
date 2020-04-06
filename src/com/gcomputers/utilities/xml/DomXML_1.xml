@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Personnel>
+	<staff id="1001">
+		<firstname>Thundard</firstname>
+		<lastname>El Barbario</lastname>
+		<nickname>Dard</nickname>
+                <state>California</state>
+		<salary>1000000</salary>
+	</staff>
+	<staff id="2001">
+		<firstname>Foo</firstname>
+		<lastname>Bar</lastname>
+		<nickname>FB</nickname>
+                <state>Colorado</state>
+		<salary>100000</salary>
+	</staff>
+        <staff id="3001">
+		<firstname>Ricky</firstname>
+		<lastname>Ricardo</lastname>
+		<nickname>Little Ricky</nickname>
+                <state>Cuba</state>
+		<salary>250000</salary>
+	</staff>
+</Personnel>
