@@ -20,7 +20,7 @@ package com.gcomputers.utilities.xml;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     private static final String FILE_PATH = "src\\com\\gcomputers\\utilities\\xml\\DomXML_1.xml";
    
     public static void main(String[] args){

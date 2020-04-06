@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <Personnel>
-	<staff id="1001">
+	<staff>
 		<firstname>Thundard</firstname>
 		<lastname>El Barbario</lastname>
 		<nickname>Dard</nickname>
                 <state>California</state>
 		<salary>1000000</salary>
 	</staff>
-	<staff id="2001">
+	<staff>
 		<firstname>Foo</firstname>
 		<lastname>Bar</lastname>
 		<nickname>FB</nickname>
                 <state>Colorado</state>
 		<salary>100000</salary>
 	</staff>
-        <staff id="3001">
+        <staff>
 		<firstname>Ricky</firstname>
 		<lastname>Ricardo</lastname>
 		<nickname>Little Ricky</nickname>

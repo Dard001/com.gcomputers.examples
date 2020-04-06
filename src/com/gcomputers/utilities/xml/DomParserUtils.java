@@ -36,10 +36,10 @@ public abstract class DomParserUtils {
 
     public static Object loadDocumentFile(String filePath){
         try {
-            File DomXMLFile = new File(filePath);
+            File domXMLFile = new File(filePath);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(DomXMLFile);
+            Document doc = dBuilder.parse(domXMLFile);
 
             doc.getDocumentElement().normalize();
 
@@ -64,7 +64,7 @@ public abstract class DomParserUtils {
     public static int getChildObjectsNumber(Object doc){
         Document document = (Document)doc;
         
-        return (document.getDocumentElement().getChildNodes().item(1).getChildNodes().getLength() / 2);
+        return document.getDocumentElement().getChildNodes().item(1).getChildNodes().getLength() / 2;
     }
     
     public static String getPrimaryNodeName(Object doc){
@@ -80,17 +80,28 @@ public abstract class DomParserUtils {
         
         domFile = new String[primaryObjectsNumber][primaryAttributesNumber + childElementsNumber];
 
-        for (int x = 0; x < primaryObjectsNumber; x++) {
-
+        if(primaryAttributesNumber > 0){
+            for (int x = 0; x < primaryObjectsNumber; x++) {
                 Node nNode = nList.item(x);
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    domFile[x][0] = nNode.getAttributes().item(0).getTextContent();
+                        domFile[x][0] = nNode.getAttributes().item(0).getTextContent();
 
-                    for (int y = 1; y < primaryAttributesNumber + childElementsNumber; y++){    
-                        domFile[x][y] = nNode.getChildNodes().item(y + (y - 1)).getTextContent();
-                    }
-                }
+                        for (int y = 1; y < primaryAttributesNumber + childElementsNumber; y++){    
+                            domFile[x][y] = nNode.getChildNodes().item(y + (y - 1)).getTextContent();
+                    } 
+                } 
+            }
+        } else {
+            for (int x = 0; x < primaryObjectsNumber; x++) {
+                Node nNode = nList.item(x);
+
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                        for (int y = 0, z = 1; y < childElementsNumber; y++, z++){    
+                            domFile[x][y] = nNode.getChildNodes().item(y + z).getTextContent();
+                    } 
+                } 
+            }
         }
         return domFile;
     }
