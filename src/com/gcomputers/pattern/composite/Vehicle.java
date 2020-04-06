@@ -21,5 +21,5 @@ package com.gcomputers.pattern.composite;
  * @author Dard
  */
 public interface Vehicle {
-    public void showVehicleDetails();
+    void showVehicleDetails();
 }

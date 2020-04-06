@@ -30,8 +30,4 @@ public class CarRemoteControl {
     public void setCommand(Command command){
         this.command = command;
     }
-    
-    public CarRemoteControl(){
-        
-    }
 }

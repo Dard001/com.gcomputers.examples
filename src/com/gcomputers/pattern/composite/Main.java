@@ -20,7 +20,7 @@ package com.gcomputers.pattern.composite;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     
     public static void main(String[] args){
         Car car1 = new Car(1, "Ford", "Mustang");

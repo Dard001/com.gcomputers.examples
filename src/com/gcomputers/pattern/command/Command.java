@@ -21,5 +21,5 @@ package com.gcomputers.pattern.command;
  * @author Dard
  */
 interface Command {
-    public void execute();
+    void execute();
 }

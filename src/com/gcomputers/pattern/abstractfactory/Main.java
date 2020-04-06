@@ -20,7 +20,7 @@ package com.gcomputers.pattern.abstractfactory;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     
     public static void main(String[] args){
         System.out.println(VehicleFactory.buildVehicle(VehicleType.CAR));

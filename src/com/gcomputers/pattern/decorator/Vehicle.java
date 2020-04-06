@@ -21,6 +21,6 @@ package com.gcomputers.pattern.decorator;
  * @author Dard
  */
 public interface Vehicle {
-    public Object[][] getVehicleData(final String vehicleData);
-    public String getFirstColumnData();
+    Object[][] getVehicleData(final String vehicleData);
+    String getFirstColumnData();
 }

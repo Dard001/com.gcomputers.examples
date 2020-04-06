@@ -98,7 +98,7 @@ public class Car {
         }
         
         private void validateCarObject(Car car){
-            //Do stuff to validate here
+            System.out.println(car + ": Car validation checks.");
         }
     }
 }

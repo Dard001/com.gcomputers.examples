@@ -20,7 +20,7 @@ package com.gcomputers.pattern.abstractfactory;
  *
  * @author Dard
  */
-public class VehicleFactory {
+public abstract class VehicleFactory {
     public static Vehicle buildVehicle(VehicleType type){
         Vehicle vehicle = null;
         
@@ -33,6 +33,9 @@ public class VehicleFactory {
                 break;
             case SUV:
                 vehicle = SUVFactory.buildVehicle(type);
+                break;
+            default:
+                System.exit(-1);
                 break;
         }
         return vehicle;

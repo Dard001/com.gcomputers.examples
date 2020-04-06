@@ -20,7 +20,7 @@ package com.gcomputers.pattern.abstractfactory;
  *
  * @author Dard
  */
-public class TruckFactory {
+public abstract class TruckFactory {
     static Vehicle buildVehicle(VehicleType type){
         Vehicle vehicle = null;
         switch(type){

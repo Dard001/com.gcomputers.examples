@@ -20,7 +20,7 @@ package com.gcomputers.pattern.command;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     
     public static void main(String[] args){
         CarRemoteControl remote = new CarRemoteControl();

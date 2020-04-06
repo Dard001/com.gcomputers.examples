@@ -21,6 +21,6 @@ package com.gcomputers.pattern.chainofresponsibility;
  * @author Dard
  */
 interface Chain {
-    public abstract void setNext(Chain nextInChain);
-    public abstract void process(ChainNumber request);
+    void setNext(Chain nextInChain);
+    void process(ChainNumber request);
 }

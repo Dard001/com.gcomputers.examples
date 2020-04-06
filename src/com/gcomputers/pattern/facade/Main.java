@@ -20,7 +20,7 @@ package com.gcomputers.pattern.facade;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     
     public static void main(String[] args){
         VehicleMaker vm = new VehicleMaker();

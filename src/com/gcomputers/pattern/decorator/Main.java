@@ -20,7 +20,7 @@ package com.gcomputers.pattern.decorator;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     public static void main(String[] args){
         SupportVehicleDecorator spd = new SupportVehicleDecorator(new VehicleLinkDecorator(new Car()));
         System.out.println(spd.getFirstColumnData());

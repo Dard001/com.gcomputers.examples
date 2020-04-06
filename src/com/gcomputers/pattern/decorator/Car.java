@@ -22,7 +22,7 @@ package com.gcomputers.pattern.decorator;
  */
 public class Car implements Vehicle{
     public Object[][] getVehicleData(String vehicleData){
-        return null;
+        return new Object[0][0];
     }
     public String getFirstColumnData(){
         return "This car";
