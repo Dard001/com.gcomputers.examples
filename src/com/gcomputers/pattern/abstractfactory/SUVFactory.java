@@ -14,19 +14,22 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.pattern.factory;
+package com.gcomputers.pattern.abstractfactory;
 
 /**
  *
  * @author Dard
  */
-public class Car extends Vehicle{
-    protected void construct(){
-        System.out.println("Building Car");
-        //Do Stuff
-    }
-    public Car() {
-        super(VehicleType.CAR);
-        construct();
+public class SUVFactory {
+    static Vehicle buildVehicle(VehicleType type){
+        Vehicle vehicle = null;
+        switch(type){
+            case SUV:
+                vehicle = new SUV(Model.EXPLORER, Location.JAPAN);
+                break;
+            default:
+                break;
+        }
+        return vehicle;
     }
 }

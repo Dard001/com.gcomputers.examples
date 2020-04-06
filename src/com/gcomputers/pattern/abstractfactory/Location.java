@@ -14,19 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.pattern.factory;
+package com.gcomputers.pattern.abstractfactory;
 
 /**
  *
  * @author Dard
  */
-public class Plane extends Vehicle{
-    protected void construct(){
-        System.out.println("Building Plane");
-        //Do Stuff
-    }
-    public Plane() {
-        super(VehicleType.PLANE);
-        construct();
-    }
+enum Location {
+    USA, JAPAN, MEXICO
 }

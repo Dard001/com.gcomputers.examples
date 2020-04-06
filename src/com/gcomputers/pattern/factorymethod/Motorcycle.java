@@ -14,12 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.pattern.factory;
+package com.gcomputers.pattern.factorymethod;
 
 /**
  *
  * @author Dard
  */
-public enum VehicleType {
-    BOAT, CAR, MOTORCYCLE, PLANE, TRUCK
+public class Motorcycle extends Vehicle{
+    protected void construct(){
+        System.out.println("Building Motorcycle");
+        //Do Stuff
+    }
+    public Motorcycle() {
+        super(VehicleType.MOTORCYCLE);
+        construct();
+    }
 }

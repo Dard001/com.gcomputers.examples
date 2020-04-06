@@ -14,19 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.pattern.factory;
+package com.gcomputers.pattern.factorymethod;
 
 /**
  *
  * @author Dard
  */
-public class Truck extends Vehicle{
+public class Plane extends Vehicle{
     protected void construct(){
-        System.out.println("Building Truck");
+        System.out.println("Building Plane");
         //Do Stuff
     }
-    public Truck() {
-        super(VehicleType.TRUCK);
+    public Plane() {
+        super(VehicleType.PLANE);
         construct();
     }
 }

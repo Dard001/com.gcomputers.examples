@@ -14,32 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.pattern.factory;
+package com.gcomputers.pattern.abstractfactory;
 
 /**
  *
  * @author Dard
  */
-public abstract class Vehicle {
-
-    private VehicleType type = null;
+public class CarFactory {
     
-    protected abstract void construct();
-    
-    public VehicleType getType(){
-        return type;
-    }
-    
-    public void setType(VehicleType type){
-        this.type = type;
-    }
-    
-    private void setupVehicle(){
-        //do stuff here
-    }
-    
-    public Vehicle(VehicleType type){
-        this.type = type;
-        setupVehicle();
+    static Vehicle buildVehicle(VehicleType type){
+        Vehicle vehicle = null;
+        switch(type){
+            case CAR:
+                vehicle = new Car(Model.MUSTANG, Location.USA);
+                break;
+            default:
+                break;
+        }
+        return vehicle;
     }
 }

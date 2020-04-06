@@ -14,19 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.pattern.factory;
+package com.gcomputers.pattern.abstractfactory;
 
 /**
  *
  * @author Dard
  */
-public abstract class Main {
+public final class SUV extends Vehicle{
     
-    public static void main(String[] args){
-        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.BOAT));
-        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.CAR));
-        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.MOTORCYCLE));
-        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.PLANE));
-        System.out.println(VehicleFactoryHelper.buildVehicle(VehicleType.TRUCK));
+    @Override
+    protected void construct(){
+        System.out.println("Creating SUV");
+    }
+    
+    SUV(Model model, Location location){
+        super(VehicleType.SUV, model, location);
+        construct();
     }
 }
