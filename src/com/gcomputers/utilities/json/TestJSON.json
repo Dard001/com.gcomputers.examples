@@ -1,0 +1,25 @@
+{
+    "firstName": "Thundard",
+    "lastName": "El Barbario",
+    "age": 35,
+    "address": {
+        "streetAddress": "1 Dard Road",
+        "city": "Dardville",
+        "state": "CA",
+        "postalCode": 12345
+    },
+    "phoneNumbers": [
+        {
+            "type": "home",
+            "number": "111-222-3333"
+        },
+        {
+            "type": "cell",
+            "number": "222-333-4444" 
+        },
+        {
+            "type": "work",
+            "number": "333-444-5555" 
+        }
+    ] 
+}
