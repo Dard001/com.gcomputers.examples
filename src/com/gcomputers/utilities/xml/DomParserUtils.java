@@ -34,7 +34,7 @@ import org.xml.sax.SAXException;
  */
 public abstract class DomParserUtils {
 
-    public static Object loadDocumentFile(String filePath){
+    private static Document loadDocumentFile(String filePath){
         try {
             File domXMLFile = new File(filePath);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -51,58 +51,44 @@ public abstract class DomParserUtils {
         return null;
     }
     
-    public static int getPrimaryObjectsNumber(Object doc, String primaryObjectName){
-        Document document = (Document)doc;
-        return document.getElementsByTagName(primaryObjectName).getLength();
-    }
-    
-    public static int getPrimaryAttributesNumber(Object doc, String primaryObjectName){
-        Document document = (Document)doc;
-        return document.getElementsByTagName(primaryObjectName).item(0).getAttributes().getLength();
-    }
-    
-    public static int getChildObjectsNumber(Object doc){
-        Document document = (Document)doc;
-        
-        return document.getDocumentElement().getChildNodes().item(1).getChildNodes().getLength() / 2;
-    }
-    
-    public static String getPrimaryNodeName(Object doc){
-        Document document = (Document)doc;
-        return document.getDocumentElement().getChildNodes().item(1).getNodeName();
-    }
-    
-    public static String[][] parseDomXML(Object doc, String primaryObjectName, int primaryObjectsNumber, int primaryAttributesNumber, int childElementsNumber) {     
-        String[][] domFile;
-        Document document = (Document)doc;
-        
-        NodeList nList = document.getElementsByTagName(primaryObjectName);
-        
-        domFile = new String[primaryObjectsNumber][primaryAttributesNumber + childElementsNumber];
+    public static String[][] toStringArray(NodeList nList){
+        int primaryElementsNumber = nList.getLength();
+        int primaryAttributesNumber = nList.item(0).getAttributes().getLength();
+        int childNodesNumber = nList.item(0).getChildNodes().getLength() / 2;
+
+        String[][] domFile = new String[primaryElementsNumber][primaryAttributesNumber + childNodesNumber];
 
         if(primaryAttributesNumber > 0){
-            for (int x = 0; x < primaryObjectsNumber; x++) {
+            for (int x = 0; x < primaryElementsNumber; x++) {
                 Node nNode = nList.item(x);
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
                         domFile[x][0] = nNode.getAttributes().item(0).getTextContent();
 
-                        for (int y = 1; y < primaryAttributesNumber + childElementsNumber; y++){    
+                        for (int y = 1; y < primaryAttributesNumber + childNodesNumber; y++){    
                             domFile[x][y] = nNode.getChildNodes().item(y + (y - 1)).getTextContent();
                     } 
                 } 
             }
         } else {
-            for (int x = 0; x < primaryObjectsNumber; x++) {
+            for (int x = 0; x < primaryElementsNumber; x++) {
                 Node nNode = nList.item(x);
 
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                        for (int y = 0, z = 1; y < childElementsNumber; y++, z++){    
+                        for (int y = 0, z = 1; y < childNodesNumber; y++, z++){    
                             domFile[x][y] = nNode.getChildNodes().item(y + z).getTextContent();
                     } 
                 } 
             }
         }
         return domFile;
+    }
+    
+    public static NodeList parseDomXML(String path) {     
+        Document document = DomParserUtils.loadDocumentFile(path);
+        String primaryElementName = document.getDocumentElement().getChildNodes().item(1).getNodeName();
+        NodeList nList = document.getElementsByTagName(primaryElementName);
+        
+        return nList;
     }
 }

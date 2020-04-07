@@ -21,19 +21,14 @@ package com.gcomputers.utilities.xml;
  * @author Dard
  */
 public abstract class Main {
+//    private static final String FILE_PATH = "src\\com\\gcomputers\\utilities\\xml\\DomXML.xml";
     private static final String FILE_PATH = "src\\com\\gcomputers\\utilities\\xml\\DomXML_1.xml";
-   
+    
     public static void main(String[] args){
-        Object doc = DomParserUtils.loadDocumentFile(FILE_PATH);
-        String primaryNodeName = DomParserUtils.getPrimaryNodeName(doc);
-        int numberOfPrimaryObjects = DomParserUtils.getPrimaryObjectsNumber(doc, primaryNodeName);
-        int numberOfPrimaryAttributes = DomParserUtils.getPrimaryAttributesNumber(doc, primaryNodeName);
-        int numberOfChildElements = DomParserUtils.getChildObjectsNumber(doc);
-
-        String[][] domFile = DomParserUtils.parseDomXML(doc, primaryNodeName, numberOfPrimaryObjects, numberOfPrimaryAttributes, numberOfChildElements);
+        String[][] domFile= DomParserUtils.toStringArray(DomParserUtils.parseDomXML(FILE_PATH));
         
-        for (int x = 0; x < numberOfPrimaryObjects; x++){
-            for(int y = 0; y < numberOfPrimaryAttributes + numberOfChildElements; y++){
+        for (int x = 0; x < domFile.length; x++){
+            for(int y = 0; y < domFile[x].length; y++){
                 System.out.println(domFile[x][y]);
 
             }
