@@ -35,16 +35,16 @@ public class PanelButtons extends PanelTemplate implements ActionListener {
     private final WindowHandler wh;
 
     private void setupButtons(){
-        ImageIcon homeButton = new ImageIcon(getClass().getResource("sourcefiles/homeIcon.png"));
-        ImageIcon homeButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/homeIconPressed.png"));
-        ImageIcon settingsButton = new ImageIcon(getClass().getResource("sourcefiles/settingsIcon.png"));
-        ImageIcon settingsButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/settingsIconPressed.png"));
-        ImageIcon exitButton = new ImageIcon(getClass().getResource("sourcefiles/powerIcon.png"));
-        ImageIcon exitButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/powerIconPressed.png"));
-        ImageIcon searchButton = new ImageIcon(getClass().getResource("sourcefiles/searchIcon.png"));
-        ImageIcon searchButtonPressed = new ImageIcon(getClass().getResource("sourcefiles/searchIconPressed.png"));
-        ImageIcon searchButtonNumbers = new ImageIcon(getClass().getResource("sourcefiles/searchIconNumbers.png"));
-        ImageIcon searchButtonNumbersPressed = new ImageIcon(getClass().getResource("sourcefiles/searchIconNumbersPressed.png"));
+        ImageIcon homeButton = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\homeIcon.png");
+        ImageIcon homeButtonPressed = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\homeIconPressed.png");
+        ImageIcon settingsButton = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\settingsIcon.png");
+        ImageIcon settingsButtonPressed = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\settingsIconPressed.png");
+        ImageIcon exitButton = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\powerIcon.png");
+        ImageIcon exitButtonPressed = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\powerIconPressed.png");
+        ImageIcon searchButton = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\searchIcon.png");
+        ImageIcon searchButtonPressed = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\searchIconPressed.png");
+        ImageIcon searchButtonNumbers = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\searchIconNumbers.png");
+        ImageIcon searchButtonNumbersPressed = new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\searchIconNumbersPressed.png");
         
         this.applyButtonSettings(b1, homeButton, homeButtonPressed, 50, 50);
         this.applyButtonSettings(b2, settingsButton, settingsButtonPressed, 50, 50);

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 NG @ g-computers
+ * Copyright (C) 2020 Dard
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,23 +14,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.gcomputers.ui.swing;
+package com.gcomputers.pattern.iterator;
 
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
+import java.util.Iterator;
+
 /**
  *
- * @author NG @ G-Computers
+ * @author Dard
  */
-public class MainFrame extends JFrame{
+public class NotificationIterator implements Iterator{
+    Notification[] notificationList;
+    int pos = 0;
     
-    @SuppressWarnings("OverridableMethodCallInConstructor")
-    public MainFrame(int w, int h){
-        this.setSize(w, h);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Playground Program");
-        this.setLocationRelativeTo(null);
-        this.setIconImage(new ImageIcon("src\\com\\gcomputers\\ui\\swing\\sourcefiles\\ecoIcon.png").getImage()); //materials.io
-        this.setResizable(false);
+    public Object next(){
+        Notification notification = notificationList[pos];
+        pos++;
+        return notification;
+    }
+    
+    public boolean hasNext(){
+        if (pos >= notificationList.length || notificationList[pos] == null){
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    public NotificationIterator(Notification[] notificationList){
+        this.notificationList = notificationList;
     }
 }

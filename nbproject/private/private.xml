@@ -4,91 +4,104 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Car.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/flyweight/Car.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/ChainNumber.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/WindowHandler.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Plane.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/Command.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Truck.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/Truck.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/Vehicle.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/StorageTextHelper.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/VehicleLinkDecorator.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Manufacture.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Car.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandCarUnlock.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/VehicleMake.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/xml/DomXML.xml</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/Car.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/TruckFactory.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/xml/DomParserUtils.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/VehicleType.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelSearchNames.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Boat.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/NonMotorVehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/json/TestJSON.json</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Motorcycle.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelSettings.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Truck.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/ColumnDecorator.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Truck.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/Truck.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandCarLock.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Vehicle.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/SUVFactory.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/PositiveProcessor.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelButtons.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/CarFactory.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/VehicleFactoryHelper.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/NegativeProcessor.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/crypto/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/Car.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/xml/DomXML_1.xml</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/searchtechniques/StringSearchUtils.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/VehicleAdapter.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/Chain.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/MotorVehicle.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandGarageOpen.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/VehicleType.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Car.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/interpreter/OrExpression.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/xml/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelTemplate.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/VehicleType.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Motorcycle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/SupportVehicleDecorator.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/builder/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/interpreter/AndExpression.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandCarStartEngine.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/VehicleLedger.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/MainFrame.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Plane.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/Command.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Truck.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/VehicleLinkDecorator.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Manufacture.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandCarUnlock.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/VehicleMake.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/Car.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/interpreter/TerminalExpression.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/TruckFactory.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelSearchNames.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Boat.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/NonMotorVehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/ColumnDecorator.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Truck.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/flyweight/VehicleFactory.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/interpreter/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandCarLock.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/PositiveProcessor.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/CarFactory.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/flyweight/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/flyweight/Truck.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandGarageOpen.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/Car.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/crypto/AesUtils.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Vehicle.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CarRemoteControl.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelHome.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/Dealership.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/ZeroProcessor.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/Vehicle.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/searchtechniques/NumberSearchUtils.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/bridge/VehicleType.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Car.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/xml/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/Vehicle.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelTemplate.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/VehicleType.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/chainofresponsibility/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/GarageDoor.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/Car.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/SUV.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/flyweight/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/facade/VehicleMaker.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/factorymethod/Motorcycle.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/adapter/Skateboard.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/Location.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/VehicleFactory.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/interpreter/Expression.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/PanelSearchNumbers.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/SupportVehicleDecorator.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/builder/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/abstractfactory/Model.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandCarStartEngine.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/json/JsonParserUtils.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/utilities/json/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/builder/Car.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/command/CommandGarageClose.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/VehicleLedger.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/MainFrame.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/composite/Car.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/decorator/Vehicle.java</file>
         </group>
