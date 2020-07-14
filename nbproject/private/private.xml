@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/ThreadSafeSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazyCheckingSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/BillPughSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazySingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/EagerSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectProxy.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObject.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectImplementation.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/StaticSingleton.java</file>
+        </group>
     </open-files>
 </project-private>
