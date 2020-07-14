@@ -21,19 +21,24 @@ package com.gcomputers.pattern.creational.singleton;
  * @author Dard
  */
 public class Main {
-    public static EagerSingleton es = EagerSingleton.getInstance();
-    //Static Singleton Placeholder
-    public static LazySingleton ls = LazySingleton.getInstance();
-    public static ThreadSafeSingleton tss = ThreadSafeSingleton.getInstance();
-    public static LazyCheckingSingleton lcs = LazyCheckingSingleton.getInstance();
-    public static BillPughSingleton bps = BillPughSingleton.getInstance();
     
     public static void main(String[] args){
-        System.out.println(es.toString());
+        System.out.println(LazySingleton.getInstance().toString());
+        System.out.println(LazySingleton.getInstance().toString());
+        System.out.println("");
         System.out.println(StaticSingleton.instance.toString());
-        System.out.println(ls.toString());
-        System.out.println(tss.toString());
-        System.out.println(lcs.toString());
-        System.out.println(bps.toString());
+        System.out.println(StaticSingleton.instance.toString());
+        System.out.println("");
+        System.out.println(LazySingleton.getInstance().toString());
+        System.out.println(LazySingleton.getInstance().toString());
+        System.out.println("");
+        System.out.println(ThreadSafeSingleton.getInstance().toString());
+        System.out.println(ThreadSafeSingleton.getInstance().toString());
+        System.out.println("");
+        System.out.println(LazyCheckingSingleton.getInstance().toString());
+        System.out.println(LazyCheckingSingleton.getInstance().toString());
+        System.out.println("");
+        System.out.println(BillPughSingleton.getInstance().toString());
+        System.out.println(BillPughSingleton.getInstance().toString());
     }
 }
