@@ -3,17 +3,33 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/ThreadSafeSingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazyCheckingSingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/BillPughSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazySingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/BinaryObserver.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/EagerSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectProxy.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/OnState.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/Subject.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/ThreadSafeSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/CareTaker.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObject.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectImplementation.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/VehicleState.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/Originator.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazyCheckingSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/BillPughSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/ArrivedState.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/OctalObserver.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectProxy.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/HexObserver.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/StaticSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/DrivingState.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/Observer.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/Memento.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/Main.java</file>
         </group>
     </open-files>
 </project-private>
