@@ -38,12 +38,14 @@ public abstract class Vehicle implements Cloneable{
         this.id = id;
     }
     
-    public Object clone(){
-        Object clone = null;
+    @Override
+    public Vehicle clone() throws CloneNotSupportedException {
+        Vehicle clone = null;
         
         try {
-            clone = super.clone();
+            clone = (Vehicle) super.clone();
         } catch (CloneNotSupportedException e){
+            System.out.println(e);
             System.exit(-1);
         }
         return clone;

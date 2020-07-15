@@ -20,9 +20,9 @@ package com.gcomputers.pattern.behavioral.mediator;
  *
  * @author Dard
  */
-interface Mediator {
-    public void registerDealership(Dealership dealership);
-    public void registerOrder(VehicleOrder order);
-    public boolean orderReceived();
-    public void orderStatus(boolean status);
+public interface Mediator {
+    void registerDealership(Dealership dealership);
+    void registerOrder(VehicleOrder order);
+    boolean orderReceived();
+    void orderStatus(boolean status);
 }

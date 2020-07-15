@@ -20,7 +20,7 @@ package com.gcomputers.pattern.behavioral.state;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     public static void main(String[] args){
         Vehicle vehicle = new Vehicle();
         vehicle.printStatus();

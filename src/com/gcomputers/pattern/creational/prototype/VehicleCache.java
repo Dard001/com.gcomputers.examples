@@ -22,10 +22,10 @@ import java.util.Hashtable;
  *
  * @author Dard
  */
-public class VehicleCache {
-    private static Hashtable<String, Vehicle> vehicleMap = new Hashtable<String, Vehicle>();
+public abstract class VehicleCache {
+    private static final Hashtable<String, Vehicle> vehicleMap = new Hashtable<String, Vehicle>();
     
-    public static Vehicle getVehicle(String vehicleId){
+    public static Vehicle getVehicle(String vehicleId) throws CloneNotSupportedException{
         Vehicle cachedVehicle = vehicleMap.get(vehicleId);
         
         return (Vehicle) cachedVehicle.clone();

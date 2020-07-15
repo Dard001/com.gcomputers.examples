@@ -21,7 +21,7 @@ package com.gcomputers.pattern.behavioral.mediator;
  * @author Dard
  */
 public class Dealership implements Command{
-    private VehicleMediator mediator;
+    final VehicleMediator mediator;
     
     @Override
     public void order() {

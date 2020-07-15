@@ -20,7 +20,7 @@ package com.gcomputers.pattern.behavioral.memento;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     public static void main(String[] args){
         Originator originator = new Originator();
         CareTaker careTaker = new CareTaker();

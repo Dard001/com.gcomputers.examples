@@ -26,18 +26,16 @@ public class NotificationIterator implements Iterator{
     Notification[] notificationList;
     int pos = 0;
     
+    @Override
     public Object next(){
         Notification notification = notificationList[pos];
         pos++;
         return notification;
     }
     
+    @Override
     public boolean hasNext(){
-        if (pos >= notificationList.length || notificationList[pos] == null){
-            return false;
-        } else {
-            return true;
-        }
+        return !(pos >= notificationList.length || notificationList[pos] == null);
     }
     
     public NotificationIterator(Notification[] notificationList){

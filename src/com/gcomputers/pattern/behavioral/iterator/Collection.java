@@ -23,5 +23,5 @@ import java.util.Iterator;
  * @author Dard
  */
 interface Collection {
-    public Iterator createIterator();
+    Iterator createIterator();
 }

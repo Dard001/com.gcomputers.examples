@@ -23,12 +23,9 @@ package com.gcomputers.pattern.behavioral.interpreter;
 public class TerminalExpression implements Expression {
     String data;
 
+    @Override
     public boolean interpret(String context){
-        if (context.contains(data)){
-            return true;
-        } else {
-            return false;
-        }
+        return context.contains(data);
     }
     
     public TerminalExpression(String data){

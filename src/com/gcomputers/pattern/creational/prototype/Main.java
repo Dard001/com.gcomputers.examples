@@ -20,17 +20,17 @@ package com.gcomputers.pattern.creational.prototype;
  *
  * @author Dard
  */
-public class Main {
+public abstract class Main {
     public static void main(String[] args){
         VehicleCache.loadCache();
         
-        Vehicle clonedVehicle = (Vehicle) VehicleCache.getVehicle("1");
+        Vehicle clonedVehicle = VehicleCache.getVehicle("1");
         System.out.println("Vehicle: " + clonedVehicle.getType());
         
-        Vehicle clonedVehicle2 = (Vehicle) VehicleCache.getVehicle("2");
+        Vehicle clonedVehicle2 = VehicleCache.getVehicle("2");
         System.out.println("Vehicle: " + clonedVehicle2.getType());
         
-        Vehicle clonedVehicle3 = (Vehicle) VehicleCache.getVehicle("3");
+        Vehicle clonedVehicle3 = VehicleCache.getVehicle("3");
         System.out.println("Vehicle: " + clonedVehicle3.getType());
     }
 }
