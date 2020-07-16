@@ -4,32 +4,33 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazySingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/BinaryObserver.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/EagerSingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/iterator/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/template/VehicleBuilder.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/prototype/VehicleCache.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/mediator/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/OnState.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/Subject.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/ThreadSafeSingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/CareTaker.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/interpreter/TerminalExpression.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/strategy/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/strategy/OperationMultiply.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/template/Truck.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/ui/swing/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/prototype/Vehicle.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/template/Main.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/Main.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObject.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectImplementation.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/VehicleState.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/Originator.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/LazyCheckingSingleton.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/template/Car.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/iterator/Collection.java</file>
             <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/BillPughSingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/ArrivedState.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/OctalObserver.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/ExpensiveObjectProxy.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/HexObserver.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/singleton/StaticSingleton.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/state/DrivingState.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/observer/Observer.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/memento/Memento.java</file>
-            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/structural/proxy/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/interpreter/Expression.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/mediator/Dealership.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/strategy/OperationSubtract.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/iterator/NotificationIterator.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/creational/prototype/Main.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/strategy/OperationAdd.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/strategy/Context.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/mediator/Mediator.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/strategy/Strategy.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/iterator/NotificationCollection.java</file>
+            <file>file:/C:/Users/Dard/Documents/NetBeansProjects/com.gcomputers.examples/src/com/gcomputers/pattern/behavioral/interpreter/Main.java</file>
         </group>
     </open-files>
 </project-private>
