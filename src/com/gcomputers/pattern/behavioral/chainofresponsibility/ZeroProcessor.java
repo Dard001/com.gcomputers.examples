@@ -20,13 +20,19 @@ package com.gcomputers.pattern.behavioral.chainofresponsibility;
  *
  * @author Dard
  */
+
+/*
+* Concrete handlers : These are actual handlers of the request chained in some sequential order.
+*/
 public class ZeroProcessor implements Chain {
     private Chain nextInChain;
     
+    //Set the next handler if this handler isn't the right one
     public void setNext(Chain chain){
         this.nextInChain = chain;
     }
     
+    //Process the object however you want it processed
     public void process(ChainNumber request){
         if (request.getNumber() == 0){
             System.out.println("ZeroProcessor:" + request.getNumber());

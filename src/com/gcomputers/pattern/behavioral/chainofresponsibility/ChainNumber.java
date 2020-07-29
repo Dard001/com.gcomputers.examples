@@ -20,6 +20,10 @@ package com.gcomputers.pattern.behavioral.chainofresponsibility;
  *
  * @author Dard
  */
+
+/*
+* This is the object that needs to be handled
+*/
 public class ChainNumber {
     private int number;
     

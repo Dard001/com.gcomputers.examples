@@ -20,6 +20,13 @@ package com.gcomputers.pattern.behavioral.chainofresponsibility;
  *
  * @author Dard
  */
+
+/*
+* Handler : This can be an interface which will primarily recieve the request and dispatches the 
+* request to chain of handlers. It has reference of only first handler in the chain and does not 
+* know anything about rest of the handlers.
+*/
+
 interface Chain {
     void setNext(Chain nextInChain);
     void process(ChainNumber request);
